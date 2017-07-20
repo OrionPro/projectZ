@@ -1,0 +1,3276 @@
+@import "bourbon"
+@import "vars.sass"
+@import "sprite/sprite.sass"
+
+// loads Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/owl.carousel/assets/owl.carousel.sass"
+@import "../app/libs/FontAwesome/font-awesome.min"
+@import "../app/libs/slidebars/slidebars.min"
+
+*::-webkit-input-placeholder
+	color: #000
+	opacity: 1
+	font-size: 14px
+
+*:-moz-placeholder
+	color: #000
+	opacity: 1
+	font-size: 14px
+
+*::-moz-placeholder
+	color: #000
+	opacity: 1
+	font-size: 14px
+
+*:-ms-input-placeholder
+	color: #000
+	opacity: 1
+	font-size: 14px
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+// Оформление слайдбара
+
+
+
+// Секция our_advantages
+.our_advantages
+	min-height: 630px
+	background-color: #fff
+	h2
+		margin-top: 75px
+		color: #626262
+		text-align: center
+		font-size: 35px
+	.our_advantages_item
+		margin-bottom: 55px
+		h3
+			font-size: 27px
+			text-align: center
+		p
+			margin-top: 15px
+			font-size: 22px
+			line-height: 1.2
+			text-align: center
+		.our_advantages_item_img
+			text-align: center
+			i
+				font-size: 72px
+				color: #00b6f4
+// Секция main_content
+.main_content
+	text-align: center
+// Секция
+.intermediate
+	text-align: center
+	min-height: 300px
+	background-color: #00b6f4
+	.intermediate_title
+		max-width: 650px
+		margin: auto
+		color: #052243
+		h3
+			margin: 30px 30px
+			text-transform: uppercase
+			font-size: 24px
+			color: #052243
+
+	.intermediate_wrap
+		margin-top: 40px
+		form
+		.intermediate_item
+			display: inline-block
+			input
+				width: 100%
+				display: inline-block
+				border: 1px solid #a2b6c9
+				background: #fff
+				color: #43637f
+				height: 40px
+				margin: 0 10px
+				padding: 0 0 0 9px
+				&::-webkit-input-placeholder
+					color: #43637f
+				&:-moz-placeholder
+					color: #43637f
+				&::-moz-placeholder
+					color: #43637f
+				&:-ms-input-placeholder
+					color: #43637f
+			input[type=submit]
+				background: #052243
+				color: #fff
+
+.content-section
+	.banners
+		margin-top: 30px
+		font-size: 0
+		position: relative
+		z-index: 11
+	.banners__item
+		width: 370px
+		margin-right: 30px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		text-align: center
+		cursor: pointer
+		overflow: hidden
+		a
+			width: 100%
+			height: 100%
+			display: block
+			img
+				transition: 0.6s
+		&:first-of-type
+			margin-left: 15px
+		&:last-of-type
+			margin-right: 15px
+		.banners__button
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			@extend %flex
+		&:hover button
+			border: 1px solid transparent
+			background-color: #fff
+			color: #000
+		&:hover a img
+			transform: scale(1.2)
+		button
+			min-width: 250px
+			height: 50px
+			font-size: 24px
+			color: #ffffff
+			border: 1px solid #fff
+			background-color: transparent
+			transition: 0.5s
+			&:focus
+				outline: 0
+			&:active
+				outline: 0
+	.form-wrap
+		margin-top: 33px
+		margin-bottom: 30px
+		position: relative
+		height: 45px
+		#anim-form-main-2
+			opacity: 0
+			transform: matrix(1, 0, 0, 1, 0, -100)
+			.search
+				width: 885px
+			input[type=submit]
+				width: 215px
+				display: inline-block
+			.button
+				width: 46px
+				vertical-align: bottom
+				height: 44px
+				background: #cccccc
+				border: 0
+				margin-left: 20px
+				position: relative
+				transition: .3s
+				&:hover
+					background: #fb0018
+				.fa
+					color: #fff
+		.form
+			position: absolute
+			z-index: 10
+			input,
+			select
+				width: 100%
+				min-height: 44px
+				display: block
+				padding-left: 40px
+				&:hover
+					text-decoration: none
+					outline: none
+				&:active
+					text-decoration: none
+					outline: none
+				&:focus
+					text-decoration: none
+					outline: none
+			input[type=submit]
+				background: #ccc
+				padding: 0
+				color: #fff
+				font-size: 14px
+				border: none
+				transition: 0.2s
+				padding: 0
+				&:hover
+					background: #fb0018
+			input[type=text]
+				&::-webkit-input-placeholder
+					color: #000
+				&:-moz-placeholder
+					color: #000
+				&::-moz-placeholder
+					color: #000
+				&:-ms-input-placeholder
+					color: #000
+			.submit-container
+				padding-right: 0
+				width: 285px
+				float: left
+				margin-left: 15px
+
+			.select-container
+				width: 270px
+				float: left
+				margin: 0 15px
+			.search
+				position: relative
+				margin-right: 15px
+				width: 580px
+				float: left
+				.search-btn
+					position: absolute
+					background: transparent
+					width: 40px
+					height: 100%
+					font-size: 14px
+					color: #818181
+					border: none
+					&:hover
+						text-decoration: none
+						outline: none
+					&:active
+						text-decoration: none
+						outline: none
+					&:focus
+						text-decoration: none
+						outline: none
+					.icon
+						display: inline-block
+						top: 13px
+						left: 20px
+						vertical-align: middle
+						@include sprite($search)
+	.main-content
+		margin-bottom: 30px
+		position: relative
+		&.login
+			overflow: hidden
+			min-height: 540px
+		.table-eff
+			width: 100%
+			tr
+				&:last-child
+					td
+						border-bottom: 1px solid #ccc
+						border-top: 1px solid #ccc
+				td
+					border: 1px solid #ccc
+					border-right: 0
+					border-bottom: 0
+					height: 99px
+					&:last-child
+						border-right: 1px solid #ccc
+					&:hover
+						border-color: #fb0018
+						border-right: 1px solid #fb0018
+						border-bottom: 1px solid #fb0018
+			td
+				padding: 14px
+				width: 25%
+				transition: .3s
+		.wrap
+			position: relative
+			.item
+				display: inline-block
+				vertical-align: top
+				max-width: 185px
+				.btn
+					width: 16px
+					height: 16px
+					position: relative
+					background: #818181
+					border: none
+					transition: .3s
+					position: absolute
+					right: 0px
+					bottom: 0px
+					.warning
+						p
+							position: absolute
+							display: none
+							font-size: 12px
+							color: #000
+							width: 153px
+							background: #fff
+							right: 17px
+							top: 10px
+							border: 1px solid #fb0018
+							padding: 4px 6px
+							border-radius: 5px
+							z-index: 10
+					.icon
+						position: absolute
+						top: 4px
+						left: 3px
+						display: inline-block
+						@include sprite($plus)
+					&:hover
+						text-decoration: none
+						background: #fb0018
+						.warning
+							p
+								display: block
+					&:active
+						text-decoration: none
+						outline: none
+					&:focus
+						text-decoration: none
+						outline: none
+				.title
+					font-size: 14px
+					margin: 0
+					display: inline-block
+					font-weight: 700
+				.lang
+					color: #ccc
+					position: relative
+					top: -4px
+					font-size: 14px
+					left: 7px
+				.list
+					padding: 0
+					margin: 0
+					display: inline-block
+					font-size: 12px
+					a
+						color: #000000
+						transition: .3s
+						&:hover
+							text-decoration: none
+							color: #fb0018
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
+				&.image
+					margin-right: 11px
+					width: auto
+	.aside-wrap
+		font-size: 16px
+		background: #f8f8f8
+		text-align: center
+		color: #000
+		padding: 48px 0 48px
+		line-height: 21px
+		margin-bottom: 43px
+	.parners-company
+		.logo-list
+			text-align: center
+			margin: 0
+			padding: 0
+			span
+				display: inline-block
+			li
+				display: inline-block
+				list-style-type: none
+				margin-right: 16px
+				&:last-child
+					margin-right: 0px
+			.wm
+				@include sprite($wm)
+			.ym
+				@include sprite($yam)
+			.qiwi
+				@include sprite($qiwi)
+			.visa
+				@include sprite($visa)
+			.mc
+				@include sprite($mc)
+			.mf
+				@include sprite($mf)
+			.bil
+				@include sprite($bil)
+			.tele
+				@include sprite($tele)
+			.cb
+				@include sprite($cb)
+	.main_content_wrap
+		width: 661px
+		padding: 55px 0 70px
+		float: right
+		margin-right: 155px
+		text-align: left
+		&.login2
+			float: none
+			margin: auto
+			text-align: center
+			input[type=submit]
+				margin-top: 20px
+		&.login1
+			position: absolute
+			left: 0
+			right: 0
+			margin: auto
+			top: calc(50% - 207px)
+		h4
+			margin: 0
+			margin-bottom: 5px
+			text-align: left
+			color: #000
+			font-weight: bold
+			font-size: 24px
+			span
+				padding-left: 10px
+				padding-right: 10px
+		.title-wrap
+			text-align: center
+			margin-bottom: 40px
+			h3
+				margin: 0
+				font-weight: 500
+				margin-bottom: 5px
+		.main_conten_form_wrap
+			width: 375px
+			display: inline-block
+			transition: height 2s
+			&.active
+				height: 500px
+			.back-link
+				margin-top: 20px
+				text-align: center
+			.select
+				display: inline-block
+				height: 47px
+				vertical-align: top
+				margin-right: 10px
+				.slct
+					padding: 0
+					border: 0
+					border: 1px solid #a69f9f
+					height: 100%
+					display: block
+					padding: 0 17px
+					span
+						font-size: 14px
+						color: #000
+					&:hover
+						background: transparent
+					&:before
+						content: none
+				.icon
+					display: inline-block
+					vertical-align: middle
+					margin-right: 25px
+
+					&.UA
+						@include sprite($ukranian)
+					&.US
+						@include sprite($catry1)
+					&.UY
+						@include sprite($catry2)
+					&.UZ
+						@include sprite($catry3)
+					&.VA
+						@include sprite($catry4)
+						margin-right: 35px
+					&.VC
+						@include sprite($catry5)
+					&.VE
+						@include sprite($catry6)
+					&.VG
+						@include sprite($catry7)
+					&.VI
+						@include sprite($catry8)
+					&.VN
+						@include sprite($catry10)
+				.drop
+					width: 268px
+					border: 1px solid #a69f9f
+					padding: 10px
+					top: 55px
+					height: 250px
+					max-height: inherit
+					li
+						padding: 0
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 0
+						.country
+							padding-left: 40px
+						&:hover
+							background: transparent
+							color: #fc2035
+
+		form
+			width: 373px
+			background-color: rgb(255, 255, 255)
+			border-radius: 5px
+			transition: 2s
+			text-align: left
+
+			label
+				margin-bottom: 10px
+				display: block
+			.recovery-color
+				color: #818181
+			.divider
+				width: 100%
+				height: 1px
+				margin-top: 30px
+				background-color: rgb(197, 198, 203)
+			p
+				margin-bottom: 16px
+				margin-top: 2px
+				font-size: 14px
+			input
+				width: 100%
+				height: 47px
+				padding-left: 17px
+				background-color: rgb(255, 255, 255)
+				border: 1px solid rgb(166, 159, 159)
+				transition: 1s
+				&:focus
+					outline: none
+					border: 1px solid #fb0018
+				&::-webkit-input-placeholder
+					color: #000
+					font-size: 14px
+				&:-moz-placeholder
+					color: #000
+					font-size: 14px
+				&::-moz-placeholder
+					color: #000
+					font-size: 14px
+				&:-ms-input-placeholder
+					color: #000
+					font-size: 14px
+				&.phone
+					width: 244px
+
+			input[type=submit]
+				width: 100%
+				height: 57px
+				background: #fb0018
+				text-decoration: none
+				border: 0
+				color: #fff
+				transition: all .3s linear
+				font-size: 14px
+				margin-bottom: 4px
+				margin-top: 10px
+				&:hover
+					background: #ccc
+		a
+			display: inline-block
+			text-decoration: none
+			color: #fb0018
+			position: relative
+			&:before
+				content: ""
+				width: 100%
+				height: 1px
+				margin: 0 0 -7px 0
+				background-color: #fb0018
+				position: absolute
+				left: 0
+				bottom: 7px
+				right: 0
+				transition: all 0.35s ease-in-out 0s
+				transform: scaleX(0)
+			&:hover
+				&:before
+					transform: scaleX(1)
+		.txt_block
+			width: 250px
+			float: right
+			text-align: left
+			p
+				& ~ p
+					margin-top: 34px
+
+		.main_content_form_social
+			p
+				margin-top: 10px
+				margin-bottom: 0
+				margin-right: 17px
+				display: inline-block
+			ul
+				display: inline-block
+				padding: 0
+				margin-left: 12px
+				li
+					list-style: none
+					display: inline-block
+					vertical-align: middle
+					margin-right: 12px
+					&:last-of-type
+						margin-right: 0
+					a
+						display: block
+						transition: 0.3s
+						text-align: center
+						width: 33px
+						height: 33px
+						background: #818181
+						border-radius: 50%
+						&:before
+							content: ""
+							display: none
+						.fa
+							color: #fff
+							vertical-align: sub
+						&:hover
+							background: #fb0018
+
+.FAQ-content
+	padding: 80px 0
+	.accordion_content
+		display: none
+		font-size: 1.8rem
+		color: #000
+		p
+			margin: 0
+			padding-left: 30px
+			padding-top: 10px
+			padding-bottom: 10px
+	.accordion
+		background-color: #fff
+		text-align: left
+		margin-bottom: 11px
+	.accordion_title
+		transition: all 0.2s ease
+		height: 50px
+		line-height: 30px
+		font-size: 18px
+		padding: 7px 45px 7px 20px
+		cursor: pointer
+		background-color: #f8f8f8
+		position: relative
+		color: #000
+		span
+			color: #646464
+			position: absolute
+			top: calc(50% - 3px)
+			right: 24px
+			width: 0
+			height: 0
+			display: inline-block
+			border: 6px solid transparent
+			border-top: 6px solid
+			border-bottom: 0
+			transition: .6s
+			&.active
+				transform: rotate(180deg)
+
+.castom-button
+	width: 285px
+	background: #ccc
+	border: 0px
+	color: #fff
+	transition: .3s
+	height: 43px
+	&:hover
+		background: #fb0018
+
+.balance-container
+	.title
+		font-size: 24px
+		font-weight: 500
+		padding-left: 24px
+		margin: 40px 70px 40px 0
+		display: inline-block
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #000
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #000000
+			border-bottom: 1px solid #fff
+
+	.tabs-wrap
+		display: none
+		justify-content: space-between
+		flex-wrap: wrap
+		&.active
+			display: flex
+	.tabs-item-conatiner
+		margin-bottom: 10px
+		border-bottom: 1px solid #000
+
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 10px 0 20px
+	.table
+		width: 100%
+		.static
+			width: 12%
+			text-align: center
+		&.sold
+			td
+				padding-bottom: 40px
+		tr
+			border: none
+			td
+				font-size: 14px
+				border: none
+				width: auto
+				padding: 15px
+				position: relative
+				&:last-child
+					padding-right: 0
+				&:hover
+					border: none
+				.all-money
+					position: absolute
+					bottom: 15px
+					left: 31px
+					color: #000000
+					border-bottom: 1px solid #ccc
+					line-height: 1
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
+				b
+					font-size: 19px
+				.info
+					top: 15px
+					right: 15px
+					position: absolute
+					width: 40px !important
+					height: 43px
+					background: #cccccc
+					transition: .3s
+					border: 0px
+					color: #fff
+					display: table
+					&:hover
+						background: #fb0018
+						.mass
+							display: block
+					.icon
+						display: table-cell
+						vertical-align: middle
+						text-align: center
+				.mass
+					position: absolute
+					display: none
+					font-size: 12px
+					color: #000
+					width: 315px
+					background: #fff
+					right: -276px
+					top: -54px
+					border: 1px solid #fb0018
+					padding: 4px 6px
+					-webkit-border-radius: 5px
+					border-radius: 5px
+					z-index: 10
+		.td-title
+			font-weight: 900
+		.td-number
+			color: #fb0018
+			font-weight: 900
+		.td-bill
+			font-weight: 900
+	.balance-form
+		width: 100%
+		input
+			width: 100%
+			height: 43px
+		input[type=text]
+			padding-left: 15px
+			width: 170px
+		input[type=submit]
+			width: 285px
+			background: #cccccc
+			border: 0px
+			color: #fff
+			transition: .3s
+			&:hover
+				background: #fb0018
+		.select
+			width: 170px
+			height: 43px
+			.slct
+				padding: 0
+				text-align: center
+				font-size: 14px
+				font-weight: 900
+				p
+					margin-right: 20px
+			.drop
+				font-weight: 900
+			.arrow
+				right: 15px
+	.table-state
+		width: 100%
+		margin-bottom: 10px
+		td
+			padding: 14px
+
+			&:last-child
+				text-align: center
+				a
+					transition: .3s
+					color: #000000
+					&:hover
+						text-decoration: none
+						color: #fb0018
+		thead
+			font-weight: 900
+			font-size: 18px
+			td
+				padding: 14px
+		tbody
+			font-size: 18px
+			tr
+				border-top: 1px solid #cccccc
+				border-bottom: 1px solid #cccccc
+				transition: .3s
+				cursor: pointer
+				&:hover
+					background: #f8f8f8
+				.blue
+					color: #6dcff6
+				.yellow
+					color: #fcb60f
+				.red
+					color: #fc384a
+				.green
+					color: #00be92
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 900
+		display: block
+		background: #f8f8f8
+		font-size: 18px
+		span
+			font-family: $font_ROBOTO_THIN
+	ul
+		padding: 0
+		margin: 0
+		font-size: 18px
+		li
+			list-style: none
+			span
+				&.blue
+					color: #6dcff6
+				&.yellow
+					color: #fcb60f
+				&.red
+					color: #fc384a
+				&.green
+					color: #00be92
+
+	.wallets
+		form
+			.td-bill
+				width: 655px
+
+.back-lote-container
+	padding: 40px 0
+	.col-lg-6,
+	.col-lg-3
+		float: left
+		padding: 0 15px
+	.col-lg-3
+		width: 25%
+	.col-lg-6
+		width: 50%
+	.select
+		.slct
+			padding-left: 15px
+	.title
+		font-size: 24px
+		margin: 0
+		margin-bottom: 10px
+	.back-lote-personage-item
+		margin-bottom: 30px
+	.main-article
+		font-size: 18px
+		margin-bottom: 30px
+	.form-container
+		padding: 30px 0
+		margin-bottom: 30px
+		border-bottom: 1px solid #cccccc
+		border-top: 1px solid #cccccc
+		.back-lote-subjects
+			margin-bottom: 35px
+			label
+				position: relative
+				display: inline-block
+				.info
+					top: calc(50% - 12px)
+			input
+				width: 100%
+			.button-wrap
+				margin-top: 30px
+				input
+					width: 209px
+				.button
+					width: 44px
+					vertical-align: bottom
+					height: 46px
+					background: #cccccc
+					border: 0
+					margin-left: 20px
+					position: relative
+					transition: .3s
+					&:hover
+						background: #fb0018
+					span
+						width: 25px
+						height: 3px
+						background: #fff
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						&.f
+							transform: rotate(90deg)
+		input
+			height: 45px
+			font-size: 14px
+			width: 285px
+		label
+			padding-left: 15px
+			display: block
+			font-size: 18px
+		input[type=text]
+			padding-left: 15px
+		input[type=submit]
+			background: #cccccc
+			border: 0px
+			color: #fff
+			transition: .3s
+			&:hover
+				background: #fb0018
+		.textarea-wrap
+			.button-wrap
+				text-align: right
+			.button
+				width: 44px
+				vertical-align: bottom
+				height: 46px
+				background: #cccccc
+				border: 0
+				margin-left: 20px
+				position: relative
+				transition: .3s
+				&:hover
+					background: #fb0018
+				span
+					width: 25px
+					height: 3px
+					background: #fff
+					position: absolute
+					left: 0
+					right: 0
+					margin: auto
+					&.f
+						transform: rotate(90deg)
+			textarea
+				padding: 10px 15px
+				width: 100%
+				resize: none
+				&::-webkit-input-placeholder
+					font-size: 16px
+				&:-moz-placeholder
+					font-size: 16px
+				&::-moz-placeholder
+					font-size: 16px
+				&:-ms-input-placeholder
+					font-size: 16px
+		.input
+			position: relative
+			span
+				position: absolute
+				top: 12px
+				left: 28px
+				font-size: 14px
+		.another-input
+			text-align: right
+			margin-bottom: 15px
+			input
+				width: 277px
+		.info
+			color: #cccccc
+			position: absolute
+			right: -30px
+			top: calc(50% + 3px)
+			cursor: pointer
+			transition: .3s
+			&:hover
+				color: #fb0018
+				p
+					display: block
+			p
+				position: absolute
+				display: none
+				font-size: 12px
+				color: #000
+				width: 327px
+				background: #fff
+				left: 19px
+				top: 3px
+				border: 1px solid #fb0018
+				padding: 4px 6px
+				-webkit-border-radius: 5px
+				border-radius: 5px
+				z-index: 10
+		.input-wrap
+			margin-bottom: 15px
+			margin-right: 30px
+			width: 277px
+			position: relative
+
+			&:last-child
+				margin-right: 0
+			&.item
+				float: left
+			&.specific
+				input[type=text]
+					width: 209px
+				.button
+					width: 44px
+					vertical-align: bottom
+					height: 46px
+					background: #cccccc
+					border: 0
+					margin-left: 20px
+					position: relative
+					transition: .3s
+					&:hover
+						background: #fb0018
+					span
+						width: 25px
+						height: 3px
+						background: #fff
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						&.f
+							transform: rotate(90deg)
+	.auction-wrap
+		text-align: center
+		.auction-link
+			font-size: 14px
+			padding: 11px 63px
+			background: #fb0018
+			transition: .3s
+			display: inline-block
+			color: #fff
+			&:hover
+				text-decoration: none
+				background: #ccc
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+.chat-main-title-wrap
+	padding: 40px 0
+	font-size: 18px
+	.main-article
+		border-bottom: 1px solid #ccc
+		padding-bottom: 15px
+		margin-bottom: 30px
+		.title
+			font-size: 24px
+			margin: 0
+			margin-bottom: 20px
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 500
+		display: block
+		background: #f8f8f8
+		font-size: 18px
+	.chat-container
+		.setting-wrap
+			width: 385px
+			float: left
+			margin-right: 30px
+			table
+				width: 100%
+				tr
+					transition: .3s
+					cursor: pointer
+					border-bottom: 1px solid #ccc
+					td
+						padding: 15px
+						&:first-child
+							width: 10px
+					&:hover
+						background: #f8f8f8
+
+				.color-num
+					color: #fb0018
+				.warning
+					color: #cccccc
+					transition: .3s
+					position: relative
+					display: block
+					height: 100%
+					p
+						position: absolute
+						display: none
+						font-size: 12px
+						color: #000
+						width: 108px
+						background: #fff
+						left: 23px
+						top: -8px
+						border: 1px solid #fb0018
+						padding: 4px 6px
+						border-radius: 5px
+						z-index: 10
+					&:hover
+						color: #fb0018
+						p
+							display: block
+		.chat-wrap
+			width: 785px
+			float: left
+
+			.title-state
+				text-align: center
+				font-weight: 900
+			.chat
+				overflow: auto
+				height: 590px
+				padding: 0 10px
+				.message
+					margin-bottom: 20px
+				.item
+					width: 440px
+					padding: 13px
+					border-radius: 15px
+					position: relative
+					p
+						font-size: 14px
+					&:before
+						content: ''
+						width: 0
+						display: inline-block
+						height: 0
+						border: 10px solid transparent
+						border-right: 20px solid #6dcff6
+						border-left: 0
+						position: absolute
+					&.yellow-wrap
+						border: 3px solid #fcb60f
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-right-color: #fcb60f
+							border-left-color: #fcb60f
+					&.blue-wrap
+						border: 3px solid #6dcff6
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-left-color: #6dcff6
+							border-right-color: #6dcff6
+					&.green-wrap
+						border: 3px solid #82ca9c
+						display: inline-block
+						&:before
+							content: ''
+							border-left-color: #82ca9c
+							border-right-color: #82ca9c
+					&.left
+						float: left
+						margin-left: 23px
+						&:before
+							left: -20px
+							top: calc(50% - 8px)
+						.warning
+							position: absolute
+							right: 12px
+							top: 9px
+							color: #cccccc
+							transition: .3s
+							p
+								position: absolute
+								display: none
+								font-size: 12px
+								color: #000
+								width: 155px
+								background: #fff
+								left: 23px
+								top: -8px
+								border: 1px solid #fb0018
+								padding: 4px 6px
+								border-radius: 5px
+							&:hover
+								color: #fb0018
+								p
+									display: block
+					&.right
+						float: right
+						margin-right: 23px
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							right: -20px
+							top: calc(50% - 8px)
+							transform: rotate(180deg)
+					&.important
+						&:before
+							content: ''
+							border: 0
+							height: calc(100% - 26px)
+							width: 3px
+							background: #fb0018
+							top: 20px
+						.color
+							color: #fb0018
+					.name-date
+						margin: 0
+						.date
+							font-weight: 300
+			.text-message
+				.input
+					text-align: right
+					margin-top: 20px
+				input
+					height: 45px
+					font-size: 14px
+					width: 285px
+				input[type=submit]
+					background: #cccccc
+					border: 0px
+					color: #fff
+					transition: .3s
+					&:hover
+						background: #fb0018
+				textarea
+					max-width: 100%
+					min-width: 100%
+					padding: 6px 17px
+					border: 1px solid #ccc
+					max-height: 107px
+					min-height: 107px
+					resize: none
+
+.history-orders
+	.table-state
+		width: 100%
+		thead
+			font-weight: 900
+			font-size: 18px
+			td
+				padding: 15px
+				border-bottom: 1px solid #cccccc
+		tbody
+			font-size: 18px
+			tr
+
+				border-bottom: 1px solid #cccccc
+				width: auto
+				td
+					padding: 15px
+					&:last-child
+						color: #fc384a
+	.blue
+		color: #6dcff6
+	.yellow
+		color: #fcb60f
+	.red
+		color: #fc384a
+	.green
+		color: #00be92
+	.title-state
+		padding: 15px
+		font-weight: 500
+		margin-bottom: 0
+		display: block
+		font-size: 24px
+		font-weight: 900
+		float: left
+	.checkbox-wrap
+		float: right
+		text-align: left
+		margin-top: 24px
+		padding: 15px
+
+.pagination-wrap
+	text-align: center
+	margin: 20px 0
+	button
+		display: inline-block
+		vertical-align: super
+		transition: .3s
+		padding: 0
+		border-radius: 8px
+		&:hover
+			text-decoration: none
+			outline: none
+		&:active
+			text-decoration: none
+			outline: none
+		&:focus
+			text-decoration: none
+			outline: none
+	.prev
+		width: 0
+		height: 0
+		background: transparent
+		border: 9px solid transparent
+		border-right: 9px solid #000
+		border-left: 0
+		&:hover
+			border-right-color: #fb0018
+	.next
+		width: 0
+		height: 0
+		background: transparent
+		border: 9px solid transparent
+		border-left: 9px solid #000
+		border-right: 0
+		&:hover
+			border-left-color: #fb0018
+	.pagination
+		display: inline-block
+		margin: 0 10px
+		transition: .3s
+		a
+			color: #000
+			display: inline-block
+			padding: 0 2px
+			&.active
+				background: #fb0018
+				color: #fff
+				&:hover
+					color: #fff
+			&:hover
+				text-decoration: none
+				color: #fb0018
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+		.points
+			margin-left: -6px
+
+.my-lots-container
+	.filter-wrap
+		margin-bottom: 50px
+		label
+			margin-left: 38px
+			margin-bottom: 15px
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+		.castom-button
+			margin-top: -10px
+			float: right
+			.fa
+				padding-right: 5px
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 0 0 20px
+		.redactor-wrap
+			padding: 30px 0
+			.right
+				float: right
+			label
+				margin-left: 18px
+				margin-bottom: 10px
+			input[type=text]
+				height: 42px
+				padding-left: 18px
+				width: 100%
+				&::-webkit-input-placeholder
+					font-size: 14px
+				&:-moz-placeholder
+					font-size: 14px
+				&::-moz-placeholder
+					font-size: 14px
+				&:-ms-input-placeholder
+					font-size: 14px
+			.info
+				top: -29px
+				left: 15px
+				position: absolute
+				transition: .3s
+				border: 0px
+				color: #ccc
+				display: table
+				cursor: pointer
+				&:hover
+					color: #fb0018
+					.mass
+						display: block
+				.icon
+					display: table-cell
+					vertical-align: middle
+					text-align: center
+				.mass
+					position: absolute
+					display: none
+					font-size: 12px
+					color: #000
+					width: 265px
+					background: #fff
+					left: 19px
+					top: -28px
+					border: 1px solid #fb0018
+					padding: 4px 6px
+					-webkit-border-radius: 5px
+					border-radius: 5px
+					z-index: 10
+	.inform-wrap
+		margin-bottom: 50px
+		margin-left: 14px
+		.title-name
+			padding-left: 14px
+			.name
+				font-size: 24px
+				padding-right: 20px
+			.status
+				font-size: 14px
+				&:before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					margin-right: 5px
+					border-radius: 50%
+				&.online
+					&:before
+						background: #00be92
+				&.offline
+					&:before
+						background: #fb0018
+		.avatar
+			display: block
+			float: left
+			border: 14px solid #f8f8f8
+			margin-right: 30px
+		.contacts-user
+			float: left
+			table
+				width: 340px
+				font-size: 14px
+				tr
+					&:first-child
+						td
+							&:last-child
+								color: #000
+					td
+						&:first-child
+							font-weight: 900
+						&:last-child
+							color: #fb0018
+					&:last-child
+						td
+							font-weight: 500
+		.buttons-wrap
+			float: right
+			a
+				display: block
+				margin-bottom: 20px
+				padding: 9px 50px
+				background: #fb0018
+				border: 0px
+				color: #fff
+				transition: .3s
+				&:hover
+					text-decoration: none
+					background: #cccccc
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				&.redatction
+					background: #cccccc
+					&:hover
+						background: #fb0018
+	.tabs-wrap-container
+		.checkbox
+			margin-right: 5px
+			width: 15px
+			height: 17px
+		.tabs-wrap
+			table
+				width: 100%
+				border-collapse: collapse
+				border-spacing: 0
+				thead
+					font-weight: 900
+					td
+						position: relative
+						padding: 15px
+						border-bottom: 1px solid #ccc
+
+					.button
+						width: 0
+						height: 0
+						display: inline-block
+						border: 6px solid transparent
+						background: transparent
+						position: absolute
+						margin-left: 10px
+						transition: .3s
+						&.bottom
+							border-top-color: #000
+							top: 30px
+							&:hover
+								border-top-color: #fb0018
+						&.top
+							border-bottom-color: #000
+							top: 15px
+							&:hover
+								border-bottom-color: #fb0018
+				tbody
+					.button
+						display: inline-block
+						background: transparent
+						border: 0
+						transition: .3s
+						&:hover
+							color: #fb0018
+						.fa
+							margin-right: 5px
+							color: #fb0018
+					td
+						padding: 15px
+						border-bottom: 1px solid #ccc
+						&:last-child
+							width: 20%
+		.commets-container
+			.comments-item
+				display: none
+				&.active
+					display: block
+			.commets-links
+				border-bottom: 1px solid #cccccc
+				display: block
+				font-size: 18px
+				padding: 25px 15px
+				a
+					padding-bottom: 6px
+					border-bottom: 1px solid transparent
+					transition: .2s
+					opacity: .5
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+					&.active
+						border-bottom: 1px solid
+						opacity: 1
+				.positiv
+					color: #82ca9c
+					margin-right: 65px
+				.negative
+					color: #fb0018
+			.comments-wrap
+				padding: 20px 0 20px 105px
+				position: relative
+				min-height: 75px
+				border-bottom: 1px solid #cccccc
+				.commets-img
+					position: absolute
+					left: 0px
+					top: 35px
+			.title-name
+				margin: 0
+				.name
+					font-size: 18px
+					padding-right: 20px
+				.status
+					font-size: 14px
+					padding-right: 20px
+					font-weight: 100
+					&:before
+						content: ''
+						display: inline-block
+						width: 10px
+						height: 10px
+						margin-right: 5px
+						border-radius: 50%
+					&.online
+						&:before
+							background: #00be92
+					&.offline
+						&:before
+							background: #fb0018
+				.date
+					font-size: 18px
+					font-weight: 500
+
+.user-profile
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 0 0 20px
+	.comments-item
+		display: none
+		&.active
+			display: block
+	.setting-wrap
+		float: right
+		margin-top: 20px
+		.castom-button
+			display: flex
+			align-items: center
+			justify-content: center
+			float: right
+			height: 46px
+			margin-left: 20px
+			width: 200px
+			&:hover
+				color: #ffffff
+				text-decoration: none
+		.fa
+			color: #fff
+		.like
+			background: #cccccc
+			padding: 10px 15px
+			transition: .3s
+			cursor: pointer
+			position: relative
+			display: inline-block
+			margin-right: 10px
+			p
+				display: none
+				position: absolute
+				top: -40px
+				left: -1px
+				width: 273px
+				background: #ffffff
+				border: 1px solid #fb0018
+				border-radius: 5px
+				padding: 3px 10px
+			&:hover
+				background: #00be92
+				p
+					display: block
+			&.disLike
+				&:hover
+					background: #fb0018
+	.inform-wrap
+		margin-bottom: 50px
+		margin-left: 14px
+		.title-name
+			padding-left: 14px
+			.name
+				font-size: 24px
+				padding-right: 20px
+			.status
+				font-size: 14px
+				&:before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					margin-right: 5px
+					border-radius: 50%
+				&.online
+					&:before
+						background: #00be92
+				&.offline
+					&:before
+						background: #fb0018
+		.avatar
+			display: block
+			float: left
+			border: 14px solid #f8f8f8
+			margin-right: 30px
+		.contacts-user
+			float: left
+			table
+				width: 340px
+				font-size: 14px
+				tr
+					&:first-child
+						td
+							&:last-child
+								color: #000
+					td
+						&:first-child
+							font-weight: 900
+						&:last-child
+							color: #fb0018
+					&:last-child
+						td
+							font-weight: 500
+		.buttons-wrap
+			float: right
+			a
+				display: block
+				text-align: center
+				margin-bottom: 20px
+				padding: 9px 50px
+				background: #fb0018
+				border: 0px
+				color: #fff
+				transition: .3s
+				position: relative
+				&:hover
+					text-decoration: none
+					background: #cccccc
+					.flag
+						background: #00be92
+						i
+							&.icon
+								@include sprite($fa-check)
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				.flag
+					display: inline-block
+					width: 40px
+					height: 100%
+					position: absolute
+					background: #cccccc
+					right: 0
+					top: 0
+					transition: .3s
+					text-align: center
+					i
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						text-align: center
+						top: calc(50% - 7px)
+						&.icon
+							@include sprite($fa-close)
+
+	.tabs-wrap-container
+		.tabs-wrap
+			table
+				width: 100%
+				border-collapse: collapse
+				border-spacing: 0
+				thead
+					font-weight: 900
+					border-bottom: 1px solid #ccc
+					td
+						position: relative
+						padding: 15px
+
+					.button
+						width: 0
+						height: 0
+						display: inline-block
+						border: 6px solid transparent
+						background: transparent
+						position: absolute
+						margin-left: 10px
+						&.bottom
+							border-top-color: #000
+							top: 30px
+						&.top
+							border-bottom-color: #000
+							top: 15px
+				tbody
+					.button
+						display: inline-block
+						border: 0
+						width: 100%
+						background: #ccc
+						height: 36px
+						color: #fff
+						font-size: 14px
+						transition: .3s
+						&:hover
+							background: #fb0018
+
+					td
+						padding: 15px
+						border-bottom: 1px solid #ccc
+						&:last-child
+							width: 20%
+		.commets-container
+			.commets-links
+				border-bottom: 1px solid #cccccc
+				display: block
+				font-size: 18px
+				padding: 25px 15px
+				a
+					opacity: 0.5
+					padding-bottom: 6px
+					transition: .3s
+					border-bottom: 1px solid transparent
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+					&.active
+						opacity: 1
+						border-bottom: 1px solid
+				.positiv
+					color: #82ca9c
+					margin-right: 65px
+				.negative
+					color: #fb0018
+			.comments-wrap
+				padding: 20px 0 20px 105px
+				position: relative
+				min-height: 75px
+				border-bottom: 1px solid #cccccc
+				.commets-img
+					position: absolute
+					left: 0px
+					top: 35px
+				.border
+					border: 1px solid #ccc
+					padding: 10px 15px
+			.title-name
+				margin: 0
+				.name
+					font-size: 18px
+					padding-right: 20px
+				.status
+					font-size: 14px
+					padding-right: 20px
+					font-weight: 100
+					&:before
+						content: ''
+						display: inline-block
+						width: 10px
+						height: 10px
+						margin-right: 5px
+						border-radius: 50%
+					&.online
+						&:before
+							background: #00be92
+					&.offline
+						&:before
+							background: #fb0018
+				.date
+					font-size: 18px
+					font-weight: 500
+
+input[type=submit]
+	color: #fff
+	transition: .3s
+	&:hover
+		background: #fb0018
+	&:active
+		outline: none
+	&:focus
+		outline: none
+
+.display-none
+	.li
+		display: none
+
+.login-steps-container
+	.info
+		top: 0
+		right: 0
+		position: absolute
+		transition: .3s
+		border: 0px
+		color: #fff
+		display: table
+		cursor: pointer
+		.fa
+			color: #ccc
+		&:hover
+			.fa
+				color: #fb0018
+			.mass
+				display: block
+		.icon
+			display: table-cell
+			vertical-align: middle
+			text-align: center
+		.mass
+			position: absolute
+			display: none
+			font-size: 12px
+			color: #000
+			width: 315px
+			background: #fff
+			right: -276px
+			top: -54px
+			border: 1px solid #fb0018
+			padding: 4px 6px
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			z-index: 10
+	.title
+		font-size: 24px
+		padding: 0 15px
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+		margin-bottom: 15px
+	.tabs-wrap-container
+		padding: 12px 0
+		min-height: 500px
+	.form-container
+		width: 388px
+		.radio-button-container
+			margin: 15px 0 0 27px
+			display: none
+			input[type='radio']
+				margin-right: 20px
+				min-height: 0px
+				height: 1px
+				width: 1px
+			.fa
+				color: #818181
+				transition: .3s
+				margin-left: 65px
+			input[type='radio']
+				&:after
+					content: ''
+					position: absolute
+					top: 1px
+					left: 0px
+					@include sprite($fa-circle-thin)
+					width: 12px
+					height: 12px
+					display: block
+			input[type='radio']:checked
+				outline: none
+				&:after
+					@include sprite($fa-dot-circle-o)
+					font-size: 24px
+			input[type='radio']:checked ~ .fa
+				color: #fb0018
+			label
+				font: 16px helvetica
+				line-height: 18px
+				position: relative
+				display: block
+				margin-bottom: 20px
+				cursor: pointer
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+				-webkit-user-select: none
+				-moz-user-select: none
+				-ms-user-select: none
+		input
+			width: 100%
+			height: 100%
+			min-height: 44px
+			border: 1px solid #cccccc
+			display: inline-block
+			padding-left: 15px
+			padding-right: 42px
+
+		input[type=submit]
+			padding: 0
+			margin-top: 20px
+		.input-item
+			//height: 44px
+			display: inline-block
+			margin-bottom: 15px
+			position: relative
+			.status
+				width: 42px
+				cursor: pointer
+				position: absolute
+				height: 44px
+				top: 0
+				right: 0
+				display: inline-block
+				background: #cccccc
+				transition: .3s
+				&:before
+					content: ''
+					display: inline-block
+					@include sprite($fa-close)
+					position: absolute
+					left: 0
+					right: 0
+					margin: auto
+					top: calc(50% - 7px)
+				&:hover
+					background: #fb0018
+				&.active
+					background: #00be92
+					&:before
+						@include sprite($fa-check)
+					&:hover
+						background: #00be92
+	.add-avatar
+		.ava-item,
+		.form-item
+			float: left
+		.ava-item
+			margin-right: 30px
+			img
+				border: 15px solid #f8f8f8
+		.form-item
+			h3
+				margin: 0
+				margin-bottom: 18px
+		form
+			display: inline-block
+			input[type=submit]
+				border: 0
+				padding: 12px 0
+				width: 170px
+				margin-bottom: 15px
+				&.save
+					background: #fb0018
+					&:hover
+						background: #ccc
+			.img-src
+				lable
+					margin-left: 30px
+					font-size: 18px
+	.warning-container
+		.warning
+			.check
+				padding-left: 25px
+				cursor: pointer
+				position: relative
+				display: inline-block
+				.fa
+					//display: non
+					display: inline-block
+					width: 14px
+					height: 14px
+					position: absolute
+					top: 4px
+					left: 0
+					border: 1px solid #000
+					border-radius: 1px
+				.fa-check
+					&:before
+						position: absolute
+						top: -2px
+				&.active
+					.fa
+						display: block
+				input[type=checkbox]
+					position: absolute
+					left: -10000px
+			input[type=submit]
+				margin-top: 25px
+				padding: 12px 0
+				width: 385px
+				border: 0
+	.liked-container
+		.status
+			font-size: 14px
+			padding-right: 20px
+			font-weight: 100
+			&:before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				margin-right: 5px
+				border-radius: 50%
+			&.online
+				&:before
+					background: #00be92
+			&.offline
+				&:before
+					background: #fb0018
+		table
+			width: 100%
+			border-collapse: collapse
+			border-spacing: 0
+			thead
+				font-weight: 900
+				border-bottom: 1px solid #ccc
+				td
+					position: relative
+					padding: 15px
+			tbody
+				td
+					padding: 15px
+					border-bottom: 1px solid #ccc
+					cursor: pointer
+					&:first-child
+						width: 20%
+					&:last-child
+						width: 6%
+					.lots-status
+						.fa
+							padding-right: 10px
+							color: #ccc
+							transition: .3s
+					.button
+						background: transparent
+						transition: .3s
+						width: 100%
+						height: 100%
+						border: 0
+						.fa
+							color: #fb0018
+				tr
+					&.delete
+						background: #f8f8f8
+						.fa
+							color: #00be92
+						&:after
+							content: ''
+							width: 93%
+							left: 0
+							margin-top: 30px
+							position: absolute
+							height: 1px
+							background: #fb0018
+						&:hover
+							.button
+								.fa
+									color: #00be92
+					&:hover
+						.lots-status
+							.fa
+								color: #00be92
+						.button
+							.fa
+								color: #ccc
+
+.scroll-header-container
+	.status
+		font-size: 14px
+		padding-right: 20px
+		font-weight: 100
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 5px
+			border-radius: 50%
+		&.online
+			&:before
+				background: #00be92
+		&.offline
+			&:before
+				background: #fb0018
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+		thead
+			font-weight: 900
+			border-bottom: 1px solid #ccc
+			td
+				position: relative
+				padding: 15px
+		tbody
+			td
+				padding: 15px
+				border-bottom: 1px solid #ccc
+				cursor: pointer
+				&:first-child
+					width: 15%
+				&:last-child
+					width: 10%
+				&.name-item
+					width: 18%
+			tr
+				transition: .3s
+				&:hover
+					background: #f8f8f8
+				a
+					color: #000000
+					transition: .3s
+					&:hover
+						text-decoration: none
+						color: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+				span
+					display: inline-block
+					&.index
+						font-size: 14px
+						padding-right: 6px
+					&.index + a
+						font-size: 14px
+
+.conditions-contaienr
+	padding: 25px 0 80px
+	font-size: 14px
+	.title
+		font-size: 24px
+		display: inline
+		margin-bottom: 10px
+	.wrap
+		margin: 0px
+		padding: 0
+		margin-bottom: 30px
+		li
+			list-style-type: none
+	.item
+		border-bottom: 1px solid #ccc
+		padding-bottom: 18px
+		padding-top: 25px
+		&:first-child
+			padding-top: 0
+	.article
+		width: 655px
+		display: inline-block
+		margin-right: 10px
+		font-weight: 900
+	.aside
+		vertical-align: top
+		display: inline-block
+		position: relative
+		padding-left: 25px
+		font-weight: 900
+		.fa
+			position: absolute
+			left: 2px
+			top: 3px
+			color: #fb0018
+	.button-item
+		text-align: center
+		.button
+			color: #fff
+			display: inline-block
+			padding: 17px 125px
+			background: #fb0018
+			transition: .3s
+			&:hover
+				text-decoration: none
+				background: #ccc
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+.service-container
+	margin-top: 40px
+	.title
+		font-size: 24px
+		margin-top: 0
+		padding: 0 15px
+
+	.article
+		font-size: 18px
+		padding: 0 15px 20px
+		border-bottom: 1px solid #ccc
+		margin-bottom: 50px
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+		margin-bottom: 15px
+		.filter-select
+			display: inline-block
+			float: right
+			width: 290px
+			position: relative
+			bottom: 10px
+	.tabs-wrap-container
+		padding: 12px 0
+		min-height: 500px
+	.intermediate-container
+		margin-bottom: 40px
+		.select
+			display: inline-block
+			width: 285px
+			margin-right: 30px
+			margin-bottom: 30px
+		.checkboxes
+			&.inline-block
+				display: inline-block
+		.checkbox
+			display: inline-block
+			vertical-align: top
+			margin-top: -7px
+			.fa-castom
+				color: #cccccc
+				transition: .3s
+				cursor: pointer
+				position: relative
+				top: 2px
+				p
+					display: none
+					border: 1px solid #fb0018
+					padding: 10px 15px
+					position: absolute
+					top: 10px
+					border-radius: 5px
+					width: 255px
+					font-size: 14px
+					font-family: RobotoRegular, Arial, sans-serif
+					left: 24px
+					color: #000000
+					background: #fff
+				&:hover
+					color: #fb0018
+					p
+						display: block
+			.check
+				padding-left: 25px
+				cursor: pointer
+				position: relative
+				display: inline-block
+				.fa
+					display: inline-block
+					width: 14px
+					height: 14px
+					position: absolute
+					top: 4px
+					left: 0
+					border: 1px solid #000
+					border-radius: 1px
+				.fa-check
+					&:before
+						position: absolute
+						top: -2px
+				&.active
+					.fa
+						display: block
+				input[type=checkbox]
+					position: absolute
+					left: -10000px
+		.button
+			color: #fff
+			font-size: 14px
+			display: inline-block
+			padding: 10px 59px
+			background: #fb0018
+			vertical-align: top
+			margin-left: 57px
+			transition: .3s
+			&:hover
+				text-decoration: none
+				background: #ccc
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+	.status
+		font-size: 14px
+		margin-left: 8px
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 5px
+			border-radius: 50%
+			vertical-align: middle
+		&.online
+			&:before
+				background: #00be92
+		&.offline
+			&:before
+				background: #fb0018
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+		&.table-2
+			tr
+				td
+					&:last-child
+						width: 12%
+					&:nth-child(3)
+						width: 36%
+		&.table-3
+			tr
+				td
+					&:last-child
+						width: 12%
+					&:nth-child(2)
+						width: 36%
+		thead
+			font-weight: 900
+			border-bottom: 1px solid #ccc
+			td
+				position: relative
+				padding: 15px
+			.button
+				width: 0
+				height: 0
+				display: inline-block
+				border: 6px solid transparent
+				background: transparent
+				position: absolute
+				margin-left: 10px
+				transition: .3s
+				&.bottom
+					border-top-color: #000
+					top: 30px
+					&:hover
+						border-top-color: #fb0018
+				&.top
+					border-bottom-color: #000
+					top: 15px
+					&:hover
+						border-bottom-color: #fb0018
+		tbody
+			td
+				padding: 8.5px
+				border-bottom: 1px solid #ccc
+				cursor: pointer
+				&:last-child
+					width: 10%
+					button
+						width: 122px
+						height: 36px
+						font-size: 14px
+						color: #ffffff
+						background-color: #fb0018
+						transition: 0.5s
+						border: none
+						&:hover
+							background: #ccc
+							outline: 0
+						&:active
+							background: #ccc
+							outline: 0
+						&:focus
+							background: #ccc
+							outline: 0
+
+				&.price
+					width: 180px
+				&.name-item
+					width: 23%
+					font-size: 14px
+					line-height: 1.4
+			tr
+				transition: .3s
+				&:hover
+					background: #f8f8f8
+				a
+					font-size: 14px
+					color: #000000
+					transition: .3s
+					&:hover
+						text-decoration: none
+						color: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+				span
+					display: inline-block
+					&.index
+						font-size: 14px
+					&.index + a
+						font-size: 14px
+	.pagination-wrap
+		text-align: center
+		margin-top: 20px
+		margin-bottom: 10px
+		button
+			display: inline-block
+			vertical-align: super
+			transition: .3s
+			&:hover
+				text-decoration: none
+				outline: none
+			&:active
+				text-decoration: none
+				outline: none
+			&:focus
+				text-decoration: none
+				outline: none
+		.prev
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-right: 10px solid #000
+			border-left: 0
+			&:hover
+				border-right-color: #fb0018
+		.next
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-left: 10px solid #000
+			border-right: 0
+			&:hover
+				border-left-color: #fb0018
+		.pagination
+			display: inline-block
+			margin: 0 10px
+			transition: .3s
+			a
+				color: #000
+				display: inline-block
+				padding: 0 2px
+				&.active
+					background: #fb0018
+					color: #fff
+					&:hover
+						color: #fff
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+			.points
+				margin-left: -6px
+		.match
+			float: left
+	.article-wrap
+		img
+			margin-top: 60px
+		.aritcle
+			width: 785px
+			float: left
+			h3
+				margin-top: 0
+			.text
+				margin-bottom: 25px
+			li
+				padding-left: 10px
+			.number
+				li
+					list-style-type: decimal
+
+.error-contaienr
+	padding: 40px 0
+	.title-wrap
+		margin-bottom: 40px
+		h3
+			font-size: 24px
+			font-weight: 100
+			padding: 10px 25px
+
+			border: 1px solid #fb0018
+		.text
+			padding-left: 30px
+			a
+				color: #000
+	.intermediate-wrap
+		padding: 45px 0
+		text-align: center
+		&.border
+			border-bottom: 1px solid #cccccc
+			border-top: 1px solid #cccccc
+	.button
+		color: #fff
+		font-size: 14px
+		display: inline-block
+		padding: 10px 59px
+		background: #ccc
+		vertical-align: top
+		margin: 0 15px
+		transition: .3s
+		min-width: 270px
+		&:hover
+			text-decoration: none
+			background: #fb0018
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+
+@keyframes barberpole
+	from
+		background-position: 0 0
+	to
+		background-position: 122px 61px
+
+.loading-contaienr
+	min-height: 500px
+	padding: 50px 0
+	.wrap
+		height: 50px
+		padding: 3px
+		background: #eff1f1
+		border-radius: 28px
+		text-align: center
+		p
+			margin-top: 20px
+		.mask
+			background: #fcedf0
+			height: 100%
+			border-radius: 28px
+			.level
+				height: 100%
+				width: 90%
+				border-radius: 28px
+				background: #fb0018
+				overflow: hidden
+				position: relative
+				background-size: 61px 61px
+				background-image: linear-gradient(45deg, rgba(#eff1f1, 0.3) 23%, transparent 25%, transparent 50%, rgba(#eff1f1, 0.3) 50%, rgba(#eff1f1, 0.3) 75%, transparent 75%, transparent)
+				animation: barberpole 0.5s linear infinite
+				.decor
+					height: 60px
+					width: 25px
+					margin-left: 20px
+					background: #000
+					//background: #eff1f1
+					display: inline-block
+					opacity: .2
+					transform: rotate(22deg)
+					position: absolute
+					top: -7px
+
+.about-proj-container
+	padding: 50px 0
+	.title
+		font-size: 24px
+		margin: 0
+		margin-bottom: 20px
+	.text
+		font-size: 18px
+		margin-bottom: 25px
+
+.sold-lots-comments-container
+	padding: 40px 0
+	font-size: 18px
+	.main-article
+		padding-bottom: 15px
+		margin-bottom: 30px
+		.state
+			float: right
+			margin-top: 12px
+			font-size: 14px
+			.green
+				color: #00be92
+		.title
+			font-size: 24px
+			float: left
+			margin: 0
+			margin-bottom: 20px
+		.text
+			padding: 10px 17px
+			border: 1px solid #fb0018
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 500
+		display: block
+		background: #f8f8f8
+		font-size: 18px
+	.chat-container
+		.setting-wrap
+			width: 515px
+			float: left
+			.status
+				font-size: 14px
+				vertical-align: text-top
+				&:before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					margin-right: 5px
+					border-radius: 50%
+				&.online
+					&:before
+						background: #00be92
+				&.offline
+					&:before
+						background: #fb0018
+			table
+				width: 100%
+				tr
+					transition: .3s
+					td
+						padding: 4px 15px
+						&:first-child
+							font-weight: 900
+				.color-num
+					color: #fb0018
+		.chat-wrap
+			width: 685px
+			float: left
+			.title-state
+				text-align: center
+				font-weight: 900
+				margin-bottom: 12px
+				margin-top: 0
+			.chat
+				overflow: auto
+				height: 392px
+				padding: 0 10px
+				.message
+					margin-bottom: 20px
+				.item
+					width: 440px
+					padding: 13px
+					border-radius: 15px
+					position: relative
+					p
+						font-size: 14px
+					&:before
+						content: ''
+						width: 0
+						display: inline-block
+						height: 0
+						border: 10px solid transparent
+						border-right: 20px solid #6dcff6
+						border-left: 0
+						position: absolute
+					&.yellow-wrap
+						border: 3px solid #fcb60f
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-right-color: #fcb60f
+							border-left-color: #fcb60f
+					&.blue-wrap
+						border: 3px solid #6dcff6
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-left-color: #6dcff6
+							border-right-color: #6dcff6
+					&.green-wrap
+						border: 3px solid #82ca9c
+						display: inline-block
+						&:before
+							content: ''
+							border-left-color: #82ca9c
+							border-right-color: #82ca9c
+					&.left
+						float: left
+						margin-left: 23px
+						&:before
+							left: -20px
+							top: calc(50% - 8px)
+						.warning
+							position: absolute
+							right: 12px
+							top: 9px
+							color: #cccccc
+							transition: .3s
+							p
+								position: absolute
+								display: none
+								font-size: 12px
+								color: #000
+								width: 155px
+								background: #fff
+								left: 23px
+								top: -8px
+								border: 1px solid #fb0018
+								padding: 4px 6px
+								border-radius: 5px
+							&:hover
+								color: #fb0018
+								p
+									display: block
+					&.right
+						float: right
+						margin-right: 23px
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							right: -20px
+							top: calc(50% - 8px)
+							transform: rotate(180deg)
+					&.important
+						&:before
+							content: ''
+							border: 0
+							height: calc(100% - 26px)
+							width: 3px
+							background: #fb0018
+							top: 20px
+						.color
+							color: #fb0018
+					.name-date
+						margin: 0
+						.date
+							font-weight: 300
+			.text-message
+				.checkbox
+					float: left
+					text-align: left
+					width: 290px
+					font-size: 14px
+					margin: 0
+					padding-left: 22px
+					position: relative
+					.check
+						position: static
+				.input
+					text-align: right
+					margin-top: 10px
+				input
+					height: 45px
+					font-size: 14px
+					width: 285px
+				input[type=submit]
+					background: #cccccc
+					border: 0px
+					color: #fff
+					transition: .3s
+					&:hover
+						background: #fb0018
+				textarea
+					max-width: 100%
+					min-width: 100%
+					padding: 6px 17px
+					border: 1px solid #ccc
+					max-height: 107px
+					min-height: 107px
+					resize: none
+		.form-container
+			margin-top: 20px
+			width: 485px
+			input
+				width: 100%
+				height: 40px
+				padding-left: 15px
+				margin-bottom: 20px
+			input[type=submit]
+				padding: 0
+				border: 0
+				font-size: 14px
+			.select
+				margin-bottom: 20px
+				border: 1px solid #ccc
+				.slct
+					height: 40px
+					padding-left: 15px
+					font-size: 14px
+			.form-item-1
+				width: 285px
+				float: left
+				margin-right: 30px
+				position: relative
+				input[type=submit]
+					background: #fb0018
+					&:hover
+						background: #ccc
+				&:before
+					content: ''
+					display: inline-block
+					position: absolute
+					right: -22px
+					top: 11px
+					@include sprite($arrows)
+			.form-item-2
+				width: 170px
+				float: left
+			.textarea-title
+				font-size: 20px
+				margin-bottom: 5px
+				padding-left: 15px
+			textarea
+				width: 100%
+				resize: none
+				height: 155px
+				padding: 10px
+				margin-bottom: 10px
+			.submit-comments
+				padding-left: 15px
+				input[type=submit]
+					width: 170px
+					margin-left: 11px
+
+.checkbox
+	display: inline-block
+	margin-right: 30px
+	.check
+		padding-left: 25px
+		cursor: pointer
+		position: relative
+		font-size: 14px
+		.green
+			color: #00be92
+		.red
+			color: #fb0018
+		.fa
+			color: #000
+			display: inline-block
+			width: 14px
+			height: 14px
+			position: absolute
+			top: 4px
+			left: 0
+			border: 1px solid #000
+			border-radius: 1px
+		.fa-check
+			&:before
+				position: absolute
+				top: -4px
+				font-size: 15px
+		&.active
+			.fa
+				display: block
+	input[type=checkbox]
+		position: absolute
+		left: -10000px
+
+.game-currency-container
+	padding: 30px 0px
+	.form-wrap
+		margin-top: 13px
+		.form
+			.search
+				margin-right: 0px
+				width: 100%
+				float: none
+	.title
+		font-size: 24px
+		margin-bottom: 5px
+	.article
+		font-size: 18px
+		padding-left: 10px
+
+	.table-eff
+		tr
+			td
+				cursor: pointer
+				.list
+					transition: .3s
+				&:hover
+					.list
+						color: #fb0018
+
+.article-container
+	min-height: 600px
+	article
+		padding: 30px 0
+		h2
+			font-size: 24px
+		p
+			font-size: 18px
+			margin-bottom: 30px
+	.social-rows
+		margin-bottom: 50px
+		.item
+			display: inline-block
+			margin-right: 24px
+
+.all-article-container
+	min-height: 600px
+	padding: 50px 0
+	h2
+		margin: 0
+		margin-bottom: 5px
+	.social-rows
+		margin-top: 30px
+		.item
+			display: inline-block
+			margin-right: 15px
+	.wrap
+		margin-bottom: 20px
+		.item
+			display: inline-block
+			width: 545px
+			margin-bottom: 30px
+			&:nth-child(2n - 1)
+				margin-right: 30px
+			article
+				background: #f8f8f8
+				padding: 15px
+				margin-bottom: 15px
+				h3
+					margin: 0 0 5px
+					font-size: 20px
+				p
+					line-height: 1.5
+			.date
+				text-align: right
+				margin-bottom: 10px
+				.fa
+					margin-right: 10px
+			.button
+				text-align: left
+				a
+					color: #fff
+					background: #cccccc
+					display: inline-block
+					padding: 10px 30px
+					transition: .3s
+					&:hover
+						color: #fff
+						text-decoration: none
+						background: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
+.our-guarantees
+	padding-top: 40px
+	padding-bottom: 20px
+	&:first-of-type
+		border-bottom: 1px solid #cccccc
+
+.our-guarantees__img
+	margin-top: 10px
+	margin-right: 30px
+	float: left
+
+.our-guarantees__txt
+	width: 1080px
+	float: left
+	color: #000
+	h1
+		color: #000000
+		font-family: $font_MyriadPro_Regular
+		font-size: 24px
+		line-height: 1.6
+		margin: 0 0 8px 0
+	h2
+		font-size: 22px
+		margin: 0 0 8px 0
+		font-weight: normal
+	p
+		font-size: 18px
+		font-family: $font_MyriadPro_Regular
+		line-height: 1.4
+	b
+		font-family: $font_MyriadPro_Bold
+
+.how-it-works
+	text-align: center
+	border-bottom: 1px solid #cccccc
+	&.not_border
+		border: none
+		padding-bottom: 20px
+	h3
+		font-size: 20px
+		color: #000000
+.how-it-works__item
+	min-height: 210px
+	float: left
+	width: 50%
+	padding-left: 15px
+	padding-right: 15px
+	margin-bottom: 30px
+	text-align: center
+	.how-it-works__img
+		margin-bottom: 10px
+	.how-it-works__txt
+		p
+			max-height: 88px
+			overflow: hidden
+			line-height: 1.4
+
+// Футер
+.footer
+	padding: 50px 0 30px
+	nav
+		float: left
+		width: 25%
+	.vk-social-link
+		float: left
+		a
+			padding: 10px 25px
+			background: #fb0018
+			color: #fff
+			transition: .3s
+			&:hover
+				background: #cccccc
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+			.fa
+				margin-right: 5px
+	.links-list
+		margin: 0px
+		padding: 0px
+		display: inline-block
+		li
+			display: inline-block
+			list-style-type: none
+			.fa
+				color: #fff
+				vertical-align: sub
+			a
+				color: #000
+				display: inline-block
+				transition: .1s
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+					color: #fff
+				&:focus
+					text-decoration: none
+					color: #fff
+	.nav
+		padding-left: 13px
+		li
+			margin-right: 8px
+			&:last-child
+				margin-right: 0
+	.links
+		float: left
+		width: 57%
+		text-align: right
+		display: inline-block
+		padding-right: 18px
+		li
+			margin-right: 12px
+			&:last-child
+				margin-right: 0
+		.icon
+			text-align: center
+//	Секция
+//	Секция
+//	Секция
+//	Секция
+//	Секция
+//	Секция
+.modal-container
+	padding: 50px 0
+	min-height: 384px
+	a
+		display: block
+		margin: 10px
+
+// Секия footer
+
+
+
+//ALWAYS END
+@import "media"
+

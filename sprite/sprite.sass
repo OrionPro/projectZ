@@ -1,0 +1,407 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$arrows-name: 'arrows'
+$arrows-x: 179px
+$arrows-y: 46px
+$arrows-offset-x: -179px
+$arrows-offset-y: -46px
+$arrows-width: 15px
+$arrows-height: 15px
+$arrows-total-width: 195px
+$arrows-total-height: 143px
+$arrows-image: '../img/sprite.png'
+$arrows: (179px, 46px, -179px, -46px, 15px, 15px, 195px, 143px, '../img/sprite.png', 'arrows', )
+$bil-name: 'bil'
+$bil-x: 117px
+$bil-y: 0px
+$bil-offset-x: -117px
+$bil-offset-y: 0px
+$bil-width: 78px
+$bil-height: 23px
+$bil-total-width: 195px
+$bil-total-height: 143px
+$bil-image: '../img/sprite.png'
+$bil: (117px, 0px, -117px, 0px, 78px, 23px, 195px, 143px, '../img/sprite.png', 'bil', )
+$catry1-name: 'catry1'
+$catry1-x: 0px
+$catry1-y: 103px
+$catry1-offset-x: 0px
+$catry1-offset-y: -103px
+$catry1-width: 30px
+$catry1-height: 20px
+$catry1-total-width: 195px
+$catry1-total-height: 143px
+$catry1-image: '../img/sprite.png'
+$catry1: (0px, 103px, 0px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry1', )
+$catry10-name: 'catry10'
+$catry10-x: 30px
+$catry10-y: 123px
+$catry10-offset-x: -30px
+$catry10-offset-y: -123px
+$catry10-width: 30px
+$catry10-height: 20px
+$catry10-total-width: 195px
+$catry10-total-height: 143px
+$catry10-image: '../img/sprite.png'
+$catry10: (30px, 123px, -30px, -123px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry10', )
+$catry2-name: 'catry2'
+$catry2-x: 30px
+$catry2-y: 103px
+$catry2-offset-x: -30px
+$catry2-offset-y: -103px
+$catry2-width: 30px
+$catry2-height: 20px
+$catry2-total-width: 195px
+$catry2-total-height: 143px
+$catry2-image: '../img/sprite.png'
+$catry2: (30px, 103px, -30px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry2', )
+$catry3-name: 'catry3'
+$catry3-x: 0px
+$catry3-y: 123px
+$catry3-offset-x: 0px
+$catry3-offset-y: -123px
+$catry3-width: 30px
+$catry3-height: 20px
+$catry3-total-width: 195px
+$catry3-total-height: 143px
+$catry3-image: '../img/sprite.png'
+$catry3: (0px, 123px, 0px, -123px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry3', )
+$catry4-name: 'catry4'
+$catry4-x: 92px
+$catry4-y: 80px
+$catry4-offset-x: -92px
+$catry4-offset-y: -80px
+$catry4-width: 20px
+$catry4-height: 20px
+$catry4-total-width: 195px
+$catry4-total-height: 143px
+$catry4-image: '../img/sprite.png'
+$catry4: (92px, 80px, -92px, -80px, 20px, 20px, 195px, 143px, '../img/sprite.png', 'catry4', )
+$catry5-name: 'catry5'
+$catry5-x: 150px
+$catry5-y: 103px
+$catry5-offset-x: -150px
+$catry5-offset-y: -103px
+$catry5-width: 30px
+$catry5-height: 20px
+$catry5-total-width: 195px
+$catry5-total-height: 143px
+$catry5-image: '../img/sprite.png'
+$catry5: (150px, 103px, -150px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry5', )
+$catry6-name: 'catry6'
+$catry6-x: 75px
+$catry6-y: 23px
+$catry6-offset-x: -75px
+$catry6-offset-y: -23px
+$catry6-width: 30px
+$catry6-height: 20px
+$catry6-total-width: 195px
+$catry6-total-height: 143px
+$catry6-image: '../img/sprite.png'
+$catry6: (75px, 23px, -75px, -23px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry6', )
+$catry7-name: 'catry7'
+$catry7-x: 60px
+$catry7-y: 103px
+$catry7-offset-x: -60px
+$catry7-offset-y: -103px
+$catry7-width: 30px
+$catry7-height: 20px
+$catry7-total-width: 195px
+$catry7-total-height: 143px
+$catry7-image: '../img/sprite.png'
+$catry7: (60px, 103px, -60px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry7', )
+$catry8-name: 'catry8'
+$catry8-x: 120px
+$catry8-y: 103px
+$catry8-offset-x: -120px
+$catry8-offset-y: -103px
+$catry8-width: 30px
+$catry8-height: 20px
+$catry8-total-width: 195px
+$catry8-total-height: 143px
+$catry8-image: '../img/sprite.png'
+$catry8: (120px, 103px, -120px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'catry8', )
+$cb-name: 'cb'
+$cb-x: 0px
+$cb-y: 0px
+$cb-offset-x: 0px
+$cb-offset-y: 0px
+$cb-width: 117px
+$cb-height: 23px
+$cb-total-width: 195px
+$cb-total-height: 143px
+$cb-image: '../img/sprite.png'
+$cb: (0px, 0px, 0px, 0px, 117px, 23px, 195px, 143px, '../img/sprite.png', 'cb', )
+$fa-check-name: 'fa-check'
+$fa-check-x: 75px
+$fa-check-y: 43px
+$fa-check-offset-x: -75px
+$fa-check-offset-y: -43px
+$fa-check-width: 16px
+$fa-check-height: 13px
+$fa-check-total-width: 195px
+$fa-check-total-height: 143px
+$fa-check-image: '../img/sprite.png'
+$fa-check: (75px, 43px, -75px, -43px, 16px, 13px, 195px, 143px, '../img/sprite.png', 'fa-check', )
+$fa-circle-thin-name: 'fa-circle-thin'
+$fa-circle-thin-x: 89px
+$fa-circle-thin-y: 123px
+$fa-circle-thin-offset-x: -89px
+$fa-circle-thin-offset-y: -123px
+$fa-circle-thin-width: 12px
+$fa-circle-thin-height: 12px
+$fa-circle-thin-total-width: 195px
+$fa-circle-thin-total-height: 143px
+$fa-circle-thin-image: '../img/sprite.png'
+$fa-circle-thin: (89px, 123px, -89px, -123px, 12px, 12px, 195px, 143px, '../img/sprite.png', 'fa-circle-thin', )
+$fa-close-name: 'fa-close'
+$fa-close-x: 77px
+$fa-close-y: 123px
+$fa-close-offset-x: -77px
+$fa-close-offset-y: -123px
+$fa-close-width: 12px
+$fa-close-height: 12px
+$fa-close-total-width: 195px
+$fa-close-total-height: 143px
+$fa-close-image: '../img/sprite.png'
+$fa-close: (77px, 123px, -77px, -123px, 12px, 12px, 195px, 143px, '../img/sprite.png', 'fa-close', )
+$fa-dot-circle-o-name: 'fa-dot-circle-o'
+$fa-dot-circle-o-x: 101px
+$fa-dot-circle-o-y: 123px
+$fa-dot-circle-o-offset-x: -101px
+$fa-dot-circle-o-offset-y: -123px
+$fa-dot-circle-o-width: 12px
+$fa-dot-circle-o-height: 12px
+$fa-dot-circle-o-total-width: 195px
+$fa-dot-circle-o-total-height: 143px
+$fa-dot-circle-o-image: '../img/sprite.png'
+$fa-dot-circle-o: (101px, 123px, -101px, -123px, 12px, 12px, 195px, 143px, '../img/sprite.png', 'fa-dot-circle-o', )
+$fa-user-1-name: 'fa-user-1'
+$fa-user-1-x: 105px
+$fa-user-1-y: 23px
+$fa-user-1-offset-x: -105px
+$fa-user-1-offset-y: -23px
+$fa-user-1-width: 12px
+$fa-user-1-height: 13px
+$fa-user-1-total-width: 195px
+$fa-user-1-total-height: 143px
+$fa-user-1-image: '../img/sprite.png'
+$fa-user-1: (105px, 23px, -105px, -23px, 12px, 13px, 195px, 143px, '../img/sprite.png', 'fa-user-1', )
+$fa-user-name: 'fa-user'
+$fa-user-x: 91px
+$fa-user-y: 43px
+$fa-user-offset-x: -91px
+$fa-user-offset-y: -43px
+$fa-user-width: 13px
+$fa-user-height: 13px
+$fa-user-total-width: 195px
+$fa-user-total-height: 143px
+$fa-user-image: '../img/sprite.png'
+$fa-user: (91px, 43px, -91px, -43px, 13px, 13px, 195px, 143px, '../img/sprite.png', 'fa-user', )
+$fa-vk-name: 'fa-vk'
+$fa-vk-x: 117px
+$fa-vk-y: 92px
+$fa-vk-offset-x: -117px
+$fa-vk-offset-y: -92px
+$fa-vk-width: 16px
+$fa-vk-height: 10px
+$fa-vk-total-width: 195px
+$fa-vk-total-height: 143px
+$fa-vk-image: '../img/sprite.png'
+$fa-vk: (117px, 92px, -117px, -92px, 16px, 10px, 195px, 143px, '../img/sprite.png', 'fa-vk', )
+$header-mail-name: 'header_mail'
+$header-mail-x: 60px
+$header-mail-y: 123px
+$header-mail-offset-x: -60px
+$header-mail-offset-y: -123px
+$header-mail-width: 17px
+$header-mail-height: 19px
+$header-mail-total-width: 195px
+$header-mail-total-height: 143px
+$header-mail-image: '../img/sprite.png'
+$header-mail: (60px, 123px, -60px, -123px, 17px, 19px, 195px, 143px, '../img/sprite.png', 'header_mail', )
+$mc-name: 'mc'
+$mc-x: 117px
+$mc-y: 69px
+$mc-offset-x: -117px
+$mc-offset-y: -69px
+$mc-width: 38px
+$mc-height: 23px
+$mc-total-width: 195px
+$mc-total-height: 143px
+$mc-image: '../img/sprite.png'
+$mc: (117px, 69px, -117px, -69px, 38px, 23px, 195px, 143px, '../img/sprite.png', 'mc', )
+$mf-name: 'mf'
+$mf-x: 0px
+$mf-y: 57px
+$mf-offset-x: 0px
+$mf-offset-y: -57px
+$mf-width: 108px
+$mf-height: 23px
+$mf-total-width: 195px
+$mf-total-height: 143px
+$mf-image: '../img/sprite.png'
+$mf: (0px, 57px, 0px, -57px, 108px, 23px, 195px, 143px, '../img/sprite.png', 'mf', )
+$plus-name: 'plus'
+$plus-x: 186px
+$plus-y: 23px
+$plus-offset-x: -186px
+$plus-offset-y: -23px
+$plus-width: 9px
+$plus-height: 9px
+$plus-total-width: 195px
+$plus-total-height: 143px
+$plus-image: '../img/sprite.png'
+$plus: (186px, 23px, -186px, -23px, 9px, 9px, 195px, 143px, '../img/sprite.png', 'plus', )
+$qiwi-name: 'qiwi'
+$qiwi-x: 117px
+$qiwi-y: 23px
+$qiwi-offset-x: -117px
+$qiwi-offset-y: -23px
+$qiwi-width: 69px
+$qiwi-height: 23px
+$qiwi-total-width: 195px
+$qiwi-total-height: 143px
+$qiwi-image: '../img/sprite.png'
+$qiwi: (117px, 23px, -117px, -23px, 69px, 23px, 195px, 143px, '../img/sprite.png', 'qiwi', )
+$question-name: 'question'
+$question-x: 104px
+$question-y: 43px
+$question-offset-x: -104px
+$question-offset-y: -43px
+$question-width: 13px
+$question-height: 13px
+$question-total-width: 195px
+$question-total-height: 143px
+$question-image: '../img/sprite.png'
+$question: (104px, 43px, -104px, -43px, 13px, 13px, 195px, 143px, '../img/sprite.png', 'question', )
+$search-name: 'search'
+$search-x: 180px
+$search-y: 103px
+$search-offset-x: -180px
+$search-offset-y: -103px
+$search-width: 14px
+$search-height: 14px
+$search-total-width: 195px
+$search-total-height: 143px
+$search-image: '../img/sprite.png'
+$search: (180px, 103px, -180px, -103px, 14px, 14px, 195px, 143px, '../img/sprite.png', 'search', )
+$tele-name: 'tele'
+$tele-x: 117px
+$tele-y: 46px
+$tele-offset-x: -117px
+$tele-offset-y: -46px
+$tele-width: 62px
+$tele-height: 23px
+$tele-total-width: 195px
+$tele-total-height: 143px
+$tele-image: '../img/sprite.png'
+$tele: (117px, 46px, -117px, -46px, 62px, 23px, 195px, 143px, '../img/sprite.png', 'tele', )
+$ukranian-name: 'ukranian'
+$ukranian-x: 90px
+$ukranian-y: 103px
+$ukranian-offset-x: -90px
+$ukranian-offset-y: -103px
+$ukranian-width: 30px
+$ukranian-height: 20px
+$ukranian-total-width: 195px
+$ukranian-total-height: 143px
+$ukranian-image: '../img/sprite.png'
+$ukranian: (90px, 103px, -90px, -103px, 30px, 20px, 195px, 143px, '../img/sprite.png', 'ukranian', )
+$visa-name: 'visa'
+$visa-x: 155px
+$visa-y: 69px
+$visa-offset-x: -155px
+$visa-offset-y: -69px
+$visa-width: 37px
+$visa-height: 23px
+$visa-total-width: 195px
+$visa-total-height: 143px
+$visa-image: '../img/sprite.png'
+$visa: (155px, 69px, -155px, -69px, 37px, 23px, 195px, 143px, '../img/sprite.png', 'visa', )
+$wm-name: 'wm'
+$wm-x: 0px
+$wm-y: 80px
+$wm-offset-x: 0px
+$wm-offset-y: -80px
+$wm-width: 92px
+$wm-height: 23px
+$wm-total-width: 195px
+$wm-total-height: 143px
+$wm-image: '../img/sprite.png'
+$wm: (0px, 80px, 0px, -80px, 92px, 23px, 195px, 143px, '../img/sprite.png', 'wm', )
+$yam-name: 'yam'
+$yam-x: 0px
+$yam-y: 23px
+$yam-offset-x: 0px
+$yam-offset-y: -23px
+$yam-width: 75px
+$yam-height: 34px
+$yam-total-width: 195px
+$yam-total-height: 143px
+$yam-image: '../img/sprite.png'
+$yam: (0px, 23px, 0px, -23px, 75px, 34px, 195px, 143px, '../img/sprite.png', 'yam', )
+$spritesheet-width: 195px
+$spritesheet-height: 143px
+$spritesheet-image: '../img/sprite.png'
+$spritesheet-sprites: ($arrows, $bil, $catry1, $catry10, $catry2, $catry3, $catry4, $catry5, $catry6, $catry7, $catry8, $cb, $fa-check, $fa-circle-thin, $fa-close, $fa-dot-circle-o, $fa-user-1, $fa-user, $fa-vk, $header-mail, $mc, $mf, $plus, $qiwi, $question, $search, $tele, $ukranian, $visa, $wm, $yam, )
+$spritesheet: (195px, 143px, '../img/sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
