@@ -12,7 +12,6 @@ var 	gulp         = require('gulp'),
 		livereload 	 = require('gulp-livereload'),
 		babel 		 = require('gulp-babel');
 
-
 gulp.task('browser-sync', ['libs', 'styles', 'scripts'], function() {
 		browserSync.init({
 				server: {
