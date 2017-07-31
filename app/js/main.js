@@ -13,8 +13,8 @@ function accordion() {
 			$(this).removeClass("active");
 		} else {
 			$(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые
-			$(".accordion .accordion_title").children //убираем активный класс у стрелки к примеру
-			().removeClass("active");
+			$(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
+			.removeClass("active");
 			$(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
 			$content.slideToggle("slow"); //открываем скрытый блок у того что нажали
 			$(this).children().addClass("active"); //добавляем активный класс у стрекли к примеру
@@ -32,9 +32,7 @@ function Loading() {
 		} else {
 			$('.level').css('width', level + '%');
 		}
-	}, 10 // Плавность
-
-	);
+	}, 10); // Плавность
 }
 
 $(window).scroll(function () {});
@@ -123,7 +121,6 @@ $(document).ready(function () {
 		e.preventDefault();
 		lf1.play();
 		lf2.play();
-		console.log($(this));
 	});
 	$('#close-game-or-server').click(function (e) {
 		e.preventDefault();
