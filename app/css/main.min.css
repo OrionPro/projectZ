@@ -1439,10 +1439,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .content-section .main-content .wrap{position:relative}
 .content-section .main-content .wrap .item{display:inline-block;vertical-align:top;max-width:185px}
 .content-section .main-content .wrap .item .btn{width:16px;height:16px;background:#818181;border:none;-webkit-transition:.3s;transition:.3s;position:absolute;right:0;bottom:0}
-.content-section .main-content .wrap .item .btn .warning p{position:absolute;display:none;font-size:12px;color:#000;width:153px;background:#fff;right:17px;top:10px;border:1px solid #fb0018;padding:4px 6px;-webkit-border-radius:5px;border-radius:5px;z-index:10}
+.content-section .main-content .wrap .item .btn .warning p{position:absolute;visibility:hidden;opacity:0;font-size:12px;color:#000;width:153px;background:#fff;right:17px;top:5px;border:1px solid #fb0018;padding:4px 6px;-webkit-border-radius:5px;border-radius:5px;z-index:10;-webkit-transition:.3s;transition:.3s}
 .content-section .main-content .wrap .item .btn .icon{position:absolute;top:4px;left:3px;display:inline-block;background-image:url(../img/sprite.png);background-position:-186px -23px;width:9px;height:9px}
 .content-section .main-content .wrap .item .btn:hover{text-decoration:none;background:#fb0018}
-.content-section .main-content .wrap .item .btn:hover .warning p{display:block}
+.content-section .main-content .wrap .item .btn:hover .warning p{visibility:visible;opacity:1;top:10px}
 .content-section .main-content .wrap .item .btn:active,.content-section .main-content .wrap .item .btn:focus{text-decoration:none;outline:0}
 .content-section .main-content .wrap .item .title{font-size:14px;margin:0;display:inline-block;font-weight:700}
 .content-section .main-content .wrap .item .lang{color:#ccc;position:relative;top:-4px;font-size:14px;left:7px}
@@ -2185,6 +2185,12 @@ to{background-position:122px 61px}
 .how-it-works__item{min-height:210px;float:left;width:50%;padding-left:15px;padding-right:15px;margin-bottom:30px;text-align:center}
 .how-it-works__item .how-it-works__img{margin-bottom:10px}
 .how-it-works__item .how-it-works__txt p{max-height:88px;overflow:hidden;line-height:1.4}
+.recruiting-editing{padding-top:30px;padding-bottom:70px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
+.recruiting-editing__upload-logo-wrap{width:185px}
+.recruiting-editing__form-wrap{width:670px}
+.recruiting-editing__input{position:relative}
+.recruiting-editing__input label{position:absolute;top:10px;left:15px}
+.recruiting-editing__input input{width:100%;height:48px}
 .footer{padding:50px 0 30px}
 .footer nav{float:left;width:25%}
 .footer .vk-social-link{float:left}
