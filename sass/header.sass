@@ -595,7 +595,30 @@ input[type=text]
 	&:hover
 		transform: scale(1.3)
 // конец модального
-
+.check, .radio
+	display: flex
+	align-items: center
+	color: #000
+	cursor: pointer
+	font-size: 14px
+	user-select: none
+	i
+		width: 11px
+		display: inline-flex
+		margin-right: 10px
+	span
+		display: inline-flex
+		font-size: 14px
+	input[type=checkbox],
+	input[type=radio]
+		display: none
+		&:not(:checked)  ~ .fa-2
+			display: none
+		&:checked + i
+			&.fa-1
+				display: none
+			&.fa-2
+				display: inline-flex
 // всплывающие ошибки в формах
 .modal_form_input_wrap
 	position: relative
@@ -632,12 +655,12 @@ input[type=text]
 		background-image: url('../img/modal_error_triangle.png')
 	.modal_error_chest_img
 		top: -33px
-		left: 0				
+		left: 0
 		height: 9px
 	.modal_error_triangle
 		top: -43px
-		left: 10px				
-		height: 8px			
+		left: 10px
+		height: 8px
 
 // Header
 

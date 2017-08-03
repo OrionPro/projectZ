@@ -54,10 +54,19 @@ function setCursorPos(elem, pos) {
 		range.select();
 	}
 }
+function selectAndInputPadding() {
+	$(".recruiting-editing__input").each(function () {
+		var widthSpan = $(this).find("label").width();
+		$(this).find("input").css("paddingLeft", widthSpan + 20);
+	});
+}
+
 
 
 
 $(document).ready(function () {
+	// Вызов функции добавления паддингов у label
+	selectAndInputPadding();
 
 	// Определения браузера
 	function get_name_browser() {
@@ -65,12 +74,14 @@ $(document).ready(function () {
 		var ua = navigator.userAgent;
 		// с помощью регулярок проверяем наличие текста,
 		// соответствующие тому или иному браузеру
+		if (ua.search(/Edge/) > 0) return 'Edge';
 		if (ua.search(/Chrome/) > 0) return 'Google Chrome';
 		if (ua.search(/Firefox/) > 0) return 'Firefox';
 		if (ua.search(/Opera/) > 0) return 'Opera';
 		if (ua.search(/Safari/) > 0) return 'Safari';
 		if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
 		if (ua.search(/Trident/) > 0) return 'Trident';
+
 		// условий может быть и больше.
 		// сейчас сделаны проверки только
 		// для популярных браузеров
@@ -81,6 +92,9 @@ $(document).ready(function () {
 		$(".balance-container .table tr td .info").css("top", "24px");
 		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
 		// $(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
+	}
+	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Edge")  {
+		$('.check i, .radio i').css("margin-top", "2px")
 	}
 	Loading();
 	//fixedHeader
