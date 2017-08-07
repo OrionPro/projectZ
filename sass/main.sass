@@ -3273,6 +3273,8 @@ input[type=submit]
 				padding-left: 20px
 .recruiting-editing__search-wrap
 	width: 285px
+	button
+		margin-bottom: 20px
 .recruiting-editing__title
 	height: 44px
 	line-height: 44px
@@ -3322,26 +3324,86 @@ input[type=submit]
 .recruiting-find-clan
 	display: flex
 	flex-direction: row
+	&.inner
+		margin-top: 30px
+		margin-bottom: 50px
 .recruiting-find-clan__clan
 	width: 885px
 	margin-right: 30px
+	margin-bottom: 50px
 	display: flex
 	flex-direction: row
+	&:last-of-type
+		margin-bottom: 0
+.recruiting-find-clan__img-wrap
+	width: 185px
+	margin-right: 30px
+	button
+		width: 100%
 .recruiting-find-clan__img
 	width: 185px
 	height: 185px
-	display: inline-flex
-	margin-right: 30px
+	margin-bottom: 20px
 	border: 14px solid #f8f8f8
 	img
 		width: 100%
 		max-width: 100%
 		height: auto
+.recruiting-find-clan__description
+	padding-top: 5px
+	padding-bottom: 15px
+.recruiting-find-clan__description-item
+	margin-bottom: 15px
+	display: flex
+	.recruiting-find-clan__description-item-title
+		width: 200px
+		display: inline-flex
+		font-size: 14px
+		font-weight: 700
+		line-height: 1.1
+	.recruiting-find-clan__description-item-determination
+		font-family: $font_ROBOTO_THIN
+		font-size: 14px
+		font-weight: 700
+		line-height: 1.1
+
 .recruiting-find-clan__content
 	width: 670px
 .recruiting-find-clan__video-block
 	height: 270px
+	margin-bottom: 20px
 	border: 14px solid #f8f8f8
+.recruiting-find-clan__btn-block
+	display: flex
+	button
+		width: 170px
+		&:first-of-type
+			margin-right: 30px
+			margin-left: auto
+// блок recruitment-applications__title
+.recruitment-applications__title
+	height: 66px
+	font-size: 18px
+	line-height: 66px
+	padding-left: 15px
+	background-color: #f8f8f8
+// Блок recruitment-applications__table
+.recruitment-applications__table
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+		thead
+			font-size: 18px
+			font-weight: 900
+			border-bottom: 1px solid #ccc
+			td
+				padding: 15px
+		tbody
+			font-size: 18px
+			td
+				padding: 15px
+				border-bottom: 1px solid #ccc
 // Футер
 .footer
 	width: 100%
