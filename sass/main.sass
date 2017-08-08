@@ -317,7 +317,7 @@ body textarea:required:valid
 							padding: 4px 6px
 							border-radius: 5px
 							z-index: 10
-							transition: 0.3s
+							transition: 0.5s
 					.icon
 						position: absolute
 						top: 4px
@@ -776,14 +776,16 @@ body textarea:required:valid
 					&:hover
 						background: #fb0018
 						.mass
-							display: block
+							visibility: visible
+							opacity: 1
 					.icon
 						display: table-cell
 						vertical-align: middle
 						text-align: center
 				.mass
 					position: absolute
-					display: none
+					visibility: hidden
+					opacity: 0
 					font-size: 12px
 					color: #000
 					width: 315px
@@ -795,6 +797,7 @@ body textarea:required:valid
 					-webkit-border-radius: 5px
 					border-radius: 5px
 					z-index: 10
+					transition: 0.5s
 		.td-title
 			font-weight: 900
 		.td-number
@@ -1150,7 +1153,8 @@ body textarea:required:valid
 					height: 100%
 					p
 						position: absolute
-						display: none
+						visibility: hidden
+						opacity: 0
 						font-size: 12px
 						color: #000
 						width: 108px
@@ -1161,10 +1165,12 @@ body textarea:required:valid
 						padding: 4px 6px
 						border-radius: 5px
 						z-index: 10
+						transition: 0.5s
 					&:hover
 						color: #fb0018
 						p
-							display: block
+							visibility: visible
+							opacity: 1
 		.chat-wrap
 			width: 785px
 			float: left
@@ -1469,14 +1475,16 @@ body textarea:required:valid
 				&:hover
 					color: #fb0018
 					.mass
-						display: block
+						visibility: visible
+						opacity: 1
 				.icon
 					display: table-cell
 					vertical-align: middle
 					text-align: center
 				.mass
 					position: absolute
-					display: none
+					visibility: hidden
+					opacity: 0
 					font-size: 12px
 					color: #000
 					width: 265px
@@ -1488,6 +1496,7 @@ body textarea:required:valid
 					-webkit-border-radius: 5px
 					border-radius: 5px
 					z-index: 10
+					transition: 0.5s
 	.inform-wrap
 		margin-bottom: 50px
 		margin-left: 14px
@@ -1975,14 +1984,16 @@ input[type=submit]
 			.fa
 				color: #fb0018
 			.mass
-				display: block
+				visibility: visible
+				opacity: 1
 		.icon
 			display: table-cell
 			vertical-align: middle
 			text-align: center
 		.mass
 			position: absolute
-			display: none
+			visibility: hidden
+			opacity: 0
 			font-size: 12px
 			color: #000
 			width: 315px
@@ -1994,6 +2005,7 @@ input[type=submit]
 			-webkit-border-radius: 5px
 			border-radius: 5px
 			z-index: 10
+			transition: 0.5s
 	.title
 		font-size: 24px
 		padding: 0 15px
@@ -2428,27 +2440,31 @@ input[type=submit]
 				position: relative
 				top: 2px
 				p
-					display: none
+					width: 255px
+					visibility: hidden
+					opacity: 0
 					border: 1px solid #fb0018
 					padding: 10px 15px
 					position: absolute
 					top: 10px
 					border-radius: 5px
-					width: 255px
 					font-size: 14px
 					font-family: RobotoRegular, Arial, sans-serif
 					left: 24px
 					color: #000000
 					background: #fff
+					transition: 0.5s
 				&:hover
 					color: #fb0018
 					p
-						display: block
+						opacity: 1
+						visibility: visible
 			.check
 				padding-left: 25px
 				cursor: pointer
 				position: relative
 				display: inline-block
+				user-select: none
 				.fa
 					display: inline-block
 					width: 14px
@@ -3024,6 +3040,7 @@ input[type=submit]
 		cursor: pointer
 		position: relative
 		font-size: 14px
+		user-select: none
 		.green
 			color: #00be92
 		.red
@@ -3401,9 +3418,63 @@ input[type=submit]
 				padding: 15px
 		tbody
 			font-size: 18px
+			tr
+				cursor: pointer
+				transition: 0.5s
+				&:hover
+					background-color: #f8f8f8
 			td
 				padding: 15px
 				border-bottom: 1px solid #ccc
+				position: relative
+				&:first-of-type
+					i
+						margin-right: 15px
+				a
+					color: #000
+					transition: 0.5s
+					&:hover
+						color: #fb0018
+						text-decoration: none
+					&:active
+						color: #fb0018
+						text-decoration: none
+					&:focus
+						color: #fb0018
+						text-decoration: none
+				i
+					cursor: pointer
+					color: #fb0018
+					&:hover .tooltip
+						visibility: visible
+						opacity: 1
+						top: 12.5px
+				.tooltip
+					width: 207px
+					height: 35px
+					line-height: 35px
+					background-color: white
+					border: 1px solid #fb0018
+					border-radius: 5px
+					position: absolute
+					color: #000
+					visibility: hidden
+					opacity: 0
+					top: 2.5px
+					left: 50px
+					text-align: center
+					font-size: 12px
+					font-weight: $font_ROBOTO_THIN
+					transition: 0.5s
+					z-index: 10
+					a
+						&:hover
+							text-decoration: none
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
+						
 // Футер
 .footer
 	width: 100%

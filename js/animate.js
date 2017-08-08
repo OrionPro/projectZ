@@ -7,11 +7,15 @@ class Animation {
 		this.tl1 = new TimelineMax();
 		this.tl2 = new TimelineMax();
 		this.tl3 = new TimelineMax();
+		this.tl4 = new TimelineMax();
+		this.tl5 = new TimelineMax();
 
 		this.tl0.pause();
 		this.tl1.pause();
 		this.tl2.pause();
 		this.tl3.pause();
+		this.tl4.pause();
+		this.tl5.pause();
 	}
 
 	description() {
@@ -66,6 +70,23 @@ class Animation {
 				opacity: 0,
 				ease: Power4.easeOut
 			}, 0.3, "how-it-works_anim1");
+		this.tl4
+			.staggerFrom('.content-section .banners__item', 1, {
+				scaleY: 0.7,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, 0.3, "+=1")
+			.staggerFrom('.content-section .main-content .wrap', 0.7, {
+				scaleX: 0.7,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, 0.2, "-=0.6");
+		this.tl5
+			.from(".recruiting-find-clan__video-block", 0.7, {
+				scaleY: 0.7,
+				opacity: 0,
+				ease: Power3.easeOut
+			},0.5)
 	}
 
 	activeSection(section, startTop = 0, startBotton = 0) {
@@ -91,6 +112,12 @@ class Animation {
 		}
 		if (this.activeSection('how-it-works_anim2',520, 400)) {
 			this.tl3.resume();
+		}
+		if (this.activeSection('content-section',500, 500)) {
+			this.tl4.resume();
+		}
+		if (this.activeSection('recruiting-find-clan.inner',500, 500)) {
+			this.tl5.resume();
 		}
 	}
 }
