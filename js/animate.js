@@ -33,6 +33,10 @@ class Animation {
 				skewX: 100,
 				opacity: 0,
 				ease: Power4.easeOut
+			}, 1.2, '0.5')
+			.from('#logo-line', 2.3, {
+				drawSVG: '50% 50%',
+				ease: Power4.easeOut
 			}, 1.2, '0.5');
 		this.tl1.from('.our-guarantees__img', 0.7, {
 			y: -100,
