@@ -2693,12 +2693,13 @@ input[type=submit]
 .error-contaienr
 	padding: 40px 0
 	.title-wrap
-		margin-bottom: 40px
+		padding-bottom: 40px
+		border-bottom: 1px solid #ccc
 		h3
 			font-size: 24px
 			font-weight: 100
 			padding: 10px 25px
-
+			margin: 25px 0 10px 0
 			border: 1px solid #fb0018
 		.text
 			padding-left: 30px
@@ -2720,6 +2721,7 @@ input[type=submit]
 		margin: 0 15px
 		transition: .3s
 		min-width: 270px
+		border: none
 		&:hover
 			text-decoration: none
 			background: #fb0018
@@ -2727,7 +2729,50 @@ input[type=submit]
 			text-decoration: none
 		&:focus
 			text-decoration: none
-
+	.button2
+		background: #fb0018
+		&:hover
+			background: #ccc
+		i
+			margin-right: 20px
+	input
+		color: #000
+		font-size: 14px
+		display: inline-block
+		padding: 9px 15px
+		border: 1px solid #ccc
+		background: #fff
+		vertical-align: top
+		margin: 0 15px
+		transition: .3s
+		min-width: 270px
+		&:hover
+			outline: 0
+			border: 1px solid #fb0018
+		&:active
+			outline: 0
+			border: 1px solid #fb0018
+		&:focus
+			border: 1px solid #fb0018
+			outline: 0
+	button
+		color: #fff
+		font-size: 14px
+		display: inline-block
+		padding: 10px 0
+		background: #ccc
+		vertical-align: top
+		margin: 0 15px
+		transition: .3s
+		min-width: 270px
+		border: none
+		&:hover
+			background: #fb0018
+			outline: 0
+		&:active
+			outline: 0
+		&:focus
+			outline: 0
 @keyframes barberpole
 	from
 		background-position: 0 0
