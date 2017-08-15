@@ -54,7 +54,7 @@ function setCursorPos(elem, pos) {
 		range.select();
 	}
 }
-function selectAndInputPadding() {
+function inputPadding() {
 	$(".recruiting-editing__input").each(function () {
 		var widthSpan = $(this).find("label").width();
 		$(this).find("input").css("paddingLeft", widthSpan + 20);
@@ -66,7 +66,7 @@ function selectAndInputPadding() {
 
 $(document).ready(function () {
 	// Вызов функции добавления паддингов у label
-	selectAndInputPadding();
+	inputPadding();
 
 	// Определения браузера
 	function get_name_browser() {
@@ -178,6 +178,12 @@ $(document).ready(function () {
 		var data = $(this).data('tab'); //создаём переменную с датой
 		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 		$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+		if (data === 3) {
+			$('.service-container .tabs-item-conatiner .filter-select .necessary-item').addClass('active');
+		} else {
+			$('.service-container .tabs-item-conatiner .filter-select .necessary-item').removeClass('active');
+		}
+
 		//атрибут в ссылке то делаем его активным
 	});
 	$(".commets-links a").on('click', function (event) { //ссылки которые будут переключать табы
