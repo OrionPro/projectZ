@@ -691,6 +691,12 @@ body textarea:required:valid
 		padding-left: 24px
 		margin: 40px 70px 40px 0
 		display: inline-block
+	.balance-right-block
+		display: inline-block
+	.balance-affiliate-program
+		display: inline-block
+		.balance-affiliate-program-button
+			width: 170px
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -871,6 +877,8 @@ body textarea:required:valid
 					color: #fc384a
 				.green
 					color: #00be92
+				.indigo
+					color: #6995bf
 	.title-state
 		width: 100%
 		padding: 15px
@@ -895,6 +903,8 @@ body textarea:required:valid
 					color: #fc384a
 				&.green
 					color: #00be92
+				&.indigo
+					color: #6995bf
 
 	.wallets
 		form
@@ -2714,6 +2724,9 @@ input[type=submit]
 				transition: .3s
 				&:hover
 					background: #f8f8f8
+					cursor: pointer
+				&:hover td > span
+					color: #fb0018
 				a
 					font-size: 14px
 					color: #000000
@@ -2727,6 +2740,7 @@ input[type=submit]
 						text-decoration: none
 				span
 					display: inline-block
+					transition: color 0.5s
 					&.index
 						font-size: 14px
 					&.index + a

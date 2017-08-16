@@ -61,10 +61,18 @@ function inputPadding() {
 	});
 }
 
-
-
-
 $(document).ready(function () {
+	//кликабельная строка в таблице
+	$('tbody tr[data-href]').addClass('clickable').click(function () {
+		//window.location = $(this).attr('data-href'); // В том же окне
+		window.open($(this).attr('data-href')); // В новом окне
+	}).find('a, .check').hover(function () {
+		$(this).parents('tr').off('click');
+	}, function () {
+		$(this).parents('tr').click(function () {
+			window.open($(this).attr('data-href'));
+		});
+	});
 	// Вызов функции добавления паддингов у label
 	inputPadding();
 
@@ -125,8 +133,6 @@ $(document).ready(function () {
 			}else{
 				setCursorPos(this, arrMain[0].length);
 			}
-
-
 	});
 	// Анимация при клике
 	var lf1 = new TimelineMax(),

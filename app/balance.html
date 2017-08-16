@@ -2164,7 +2164,12 @@
 				<div class="balance-container">
 					<div class="clearfix">
 						<h2 class="title">Баланс: <span>48.00 руб</span></h2>
-						<input class="castom-button" type="submit" value="Пополнить свой счёт">
+						<div class="balance-right-block">
+							<input class="castom-button" type="submit" value="Пополнить свой счёт">
+						</div>
+						<div class="balance-affiliate-program">
+							<input class="castom-button balance-affiliate-program-button" type="submit" value="Пополнить счёт">
+						</div>
 					</div>
 					<div class="tabs-container">
 						<div class="tabs-item-conatiner">
@@ -2176,6 +2181,9 @@
 							</a>
 							<a href="/" data-tab="3" class="tabs-item">
 								<p>Вывод средств</p>
+							</a>
+							<a href="/" data-tab="4" class="tabs-item">
+								<p>Партнёрская программа</p>
 							</a>
 						</div>
 						<div class="tabs-wrap-container">
@@ -2311,7 +2319,7 @@
 														<li>WebMoney WMR</li>
 														<li>WebMoney WMR</li>
 													</ul>
-													<input type="hidden" id="select" name="services">
+													<input type="hidden" name="services">
 												</div>
 											</td>
 											<td><input type="text" class="td-bill" value="R1618576411874"></td>
@@ -2328,7 +2336,7 @@
 														<li>WebMoney WMR</li>
 														<li>WebMoney WMR</li>
 													</ul>
-													<input type="hidden" id="select" name="services">
+													<input type="hidden" name="services">
 												</div>
 											</td>
 											<td><input type="text" class="td-bill" value="R1618576411874"></td>
@@ -2345,7 +2353,7 @@
 														<li>WebMoney WMR</li>
 														<li>WebMoney WMR</li>
 													</ul>
-													<input type="hidden" id="select" name="services">
+													<input type="hidden" name="services">
 												</div>
 											</td>
 											<td><input type="text" class="td-bill" value="R1618576411874"></td>
@@ -2390,13 +2398,13 @@
 									</tr>
 									</tbody>
 								</table>
-								<h3 class="title-state">Описание статусов <span>(поможет вам розабраться что сейчас происходит)</span>
+								<h3 class="title-state">Описание статусов <span>(поможет вам разобраться что сейчас происходит)</span>
 								</h3>
 								<ul>
 									<li><span class="green">Новый</span> - заказ который только создали.</li>
 									<li><span class="blue">Оплаченный</span> - вы или вам оплатили этот заказ.</li>
 									<li><span class="yellow">Завершенный</span> - сделка завершена.</li>
-									<li><span class="red">Отменный</span> - по какимто причинам сделку отменили.</li>
+									<li><span class="red">Отменный</span> - по каким-то причинам сделку отменили.</li>
 								</ul>
 							</div>
 							<div class="tabs-wrap" data-tab="3">
@@ -2443,6 +2451,136 @@
 									<li><span class="blue">Оплаченный</span> - вы или вам оплатили этот заказ.</li>
 									<li><span class="yellow">Завершенный</span> - сделка завершена.</li>
 									<li><span class="red">Отменный</span> - по какимто причинам сделку отменили.</li>
+								</ul>
+							</div>
+							<div class="tabs-wrap active" data-tab="4">
+								<form class="balance-form" action="">
+									<table class="table">
+										<tr>
+											<td>
+												<b>Автоматическое формирование заявок на вывод</b>
+											</td>
+											<td>
+												<div class="select">
+													<div class="arrow">
+													</div>
+													<a href="#" class="slct"><p>WebMoney WMR</p></a>
+													<ul class="drop">
+														<li>WebMoney WMR</li>
+														<li>WebMoney WMR</li>
+														<li>WebMoney WMR</li>
+													</ul>
+													<input type="hidden" name="services">
+												</div>
+											</td>
+											<td>
+												<input class="back-lote-input" type="text" value="0 руб.">
+												<a href="#" class="info">
+													<div class="icon">
+														<i class="fa fa-info"></i>
+													</div>
+													<p class="mass">Введите минимальную сумму при которой
+														заявки на вывод будут формироваться математически</p>
+												</a>
+											</td>
+											<td><input type="submit" value="Пременить"></td>
+										</tr>
+									</table>
+									<table class="table sold">
+										<tr>
+											<td><p class="td-title">WebMoney WMR</p></td>
+											<td class="static"><p class="td-number">48091</p></td>
+											<td>
+												<div class="select">
+													<div class="arrow">
+													</div>
+													<a href="#" class="slct"><p>WebMoney WMR</p></a>
+													<ul class="drop">
+														<li>WebMoney WMR</li>
+														<li>WebMoney WMR</li>
+														<li>WebMoney WMR</li>
+													</ul>
+													<input type="hidden" name="services">
+												</div>
+											</td>
+											<td><input type="text" class="td-bill" value="R1618576411874"></td>
+											<td>
+												<input class="back-lote-input" type="text" value="0 руб.">
+												<a href="#" class="all-money">Всю сумму</a>
+											</td>
+											<td><input type="submit" value="Вывести"></td>
+										</tr>
+									</table>
+								</form>
+								<h3 class="title-state">Список операций</h3>
+								<table class="table-state">
+									<thead>
+									<tr>
+										<td>Дата</td>
+										<td>Статус</td>
+										<td>Валюта</td>
+										<td>Сумма</td>
+										<td>Отменить перевод</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td><span>2016-12-26 17:05:38</span></td>
+										<td><span class="blue">Оплаченный</span></td>
+										<td><span>WebMoney WMR</span></td>
+										<td><span>99 руб.</span></td>
+										<td>
+											<a href="#">отмена</a>
+										</td>
+									</tr>
+									<tr>
+										<td><span>2016-12-26 17:05:38</span></td>
+										<td><span class="yellow">Завершенный</span></td>
+										<td><span>WebMoney WMR</span></td>
+										<td><span>99 руб.</span></td>
+										<td>
+											<a href="#">отмена</a>
+										</td>
+									</tr>
+									<tr>
+										<td><span>2016-12-26 17:05:38</span></td>
+										<td><span class="red">Отменный</span></td>
+										<td><span>WebMoney WMR</span></td>
+										<td><span>99 руб.</span></td>
+										<td>
+											<a href="#">отмена</a>
+										</td>
+									</tr>
+									<tr>
+										<td><span>2016-12-26 17:05:38</span></td>
+										<td><span class="green">Новый</span></td>
+										<td><span>WebMoney WMR</span></td>
+										<td><span>99 руб.</span></td>
+										<td>
+											<a href="#">отмена</a>
+										</td>
+									</tr>
+									<tr>
+										<td><span>2016-12-26 17:05:38</span></td>
+										<td><span class="indigo">Партнёрские отчисления</span></td>
+										<td><span>WebMoney WMR</span></td>
+										<td><span>99 руб.</span></td>
+										<td>
+											<a href="#">отмена</a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+								<h3 class="title-state">Описание статусов <span>(поможет вам розабраться что сейчас происходит)</span>
+								</h3>
+								<ul>
+									<li><span class="green">Новый</span> - заказ который только создали.</li>
+									<li><span class="blue">Оплаченный</span> - вы или вам оплатили этот заказ.</li>
+									<li><span class="yellow">Завершенный</span> - сделка завершена.</li>
+									<li><span class="red">Отменный</span> - по какимто причинам сделку отменили.</li>
+									<li><span class="indigo">Партнерские отчисления</span> - то что вам начислили из
+										партнёрской программы.
+									</li>
 								</ul>
 							</div>
 						</div>

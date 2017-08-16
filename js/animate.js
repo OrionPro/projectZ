@@ -123,6 +123,9 @@ class Animation {
 		if (this.activeSection('recruiting-find-clan.inner',500, 500)) {
 			this.tl5.resume();
 		}
+		if (this.activeSection('recruiting-find-clan',500, 500)) {
+			this.tl5.resume();
+		}
 	}
 }
 
