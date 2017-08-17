@@ -685,18 +685,65 @@ body textarea:required:valid
 		background: #fb0018
 
 .balance-container
+	.flex
+		display: flex
+		flex-wrap: nowrap
+		align-items: center
 	.title
-		font-size: 24px
+		font-size: 22px
 		font-weight: 500
-		padding-left: 24px
+		padding-left: 15px
 		margin: 40px 70px 40px 0
 		display: inline-block
 	.balance-right-block
-		display: inline-block
+		display: none
+		&.active
+			display: inline-block
 	.balance-affiliate-program
-		display: inline-block
+		display: none
+		flex-wrap: nowrap
+		&.active
+			display: inline-flex
 		.balance-affiliate-program-button
 			width: 170px
+			margin-right: 30px
+		span
+			display: flex
+			margin-right: 30px
+			p
+				width: 370px
+				height: 44px
+				padding-left: 15px
+				line-height: 43px
+				border: 1px solid #cbcbcb
+			a
+				width: 43px
+				display: inline-block
+				background-color: #ccc
+				line-height: 43px
+				text-align: center
+				font-size: 18px
+				color: #fff
+				transition: background-color 0.5s
+				&:hover
+					text-decoration: none
+					outline: 0
+					background-color: #fb0018
+				&:active
+					text-decoration: none
+					outline: 0
+				&:focus
+					text-decoration: none
+					outline: 0
+
+	.castom-button
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+		&:focus
+			outline: 0
+		
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -1626,6 +1673,33 @@ body textarea:required:valid
 					td
 						padding: 15px
 						border-bottom: 1px solid #ccc
+						i
+							margin-right: 5px
+							color: #ccc
+							cursor: pointer
+							position: relative
+							transition: 0.5s
+							&:hover
+								color: #fb0018
+							&:hover p
+								opacity: 1
+								visibility: visible
+							p
+								width: 255px
+								visibility: hidden
+								opacity: 0
+								border: 1px solid #fb0018
+								padding: 10px 15px
+								position: absolute
+								top: -15px
+								border-radius: 5px
+								font-size: 14px
+								font-family: RobotoRegular,Arial,sans-serif
+								left: 24px
+								color: #000
+								background: #fff
+								transition: .5s
+
 						&:last-child
 							width: 20%
 		.commets-container

@@ -54,6 +54,7 @@ function setCursorPos(elem, pos) {
 		range.select();
 	}
 }
+// A
 function inputPadding() {
 	$(".recruiting-editing__input").each(function () {
 		var widthSpan = $(this).find("label").width();
@@ -61,7 +62,63 @@ function inputPadding() {
 	});
 }
 
+// Функция копирования текста в элементе
+function copyToClipboard(elem) {
+	// create hidden text element, if it doesn't already exist
+	var targetId = "_hiddenCopyText_";
+	var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+	var origSelectionStart, origSelectionEnd;
+	if (isInput) {
+		// can just use the original source element for the selection and copy
+		target = elem;
+		origSelectionStart = elem.selectionStart;
+		origSelectionEnd = elem.selectionEnd;
+	} else {
+		// must use a temporary form element for the selection and copy
+		target = document.getElementById(targetId);
+		if (!target) {
+			var target = document.createElement("textarea");
+			target.style.position = "absolute";
+			target.style.left = "-9999px";
+			target.style.top = "0";
+			target.id = targetId;
+			document.body.appendChild(target);
+		}
+		target.textContent = elem.textContent;
+	}
+	// select the content
+	var currentFocus = document.activeElement;
+	target.focus();
+	target.setSelectionRange(0, target.value.length);
+
+	// copy the selection
+	var succeed;
+	try {
+		succeed = document.execCommand("copy");
+	} catch (e) {
+		succeed = false;
+	}
+	// restore original focus
+	if (currentFocus && typeof currentFocus.focus === "function") {
+		currentFocus.focus();
+	}
+
+	if (isInput) {
+		// restore prior selection
+		elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+	} else {
+		// clear temporary content
+		target.textContent = "";
+	}
+	return succeed;
+}
 $(document).ready(function () {
+	//копируем то что в input
+	$(".copyLin").on("click", function (e) {
+		e.preventDefault();
+		var copyInput = document.getElementById("copyTarget");
+		copyToClipboard(copyInput);
+	});
 	//кликабельная строка в таблице
 	$('tbody tr[data-href]').addClass('clickable').click(function () {
 		//window.location = $(this).attr('data-href'); // В том же окне
@@ -189,8 +246,14 @@ $(document).ready(function () {
 		} else {
 			$('.service-container .tabs-item-conatiner .filter-select .necessary-item').removeClass('active');
 		}
+		if (data === 4) {
+			$('.balance-container .balance-right-block').removeClass('active');
+			$('.balance-container .balance-affiliate-program').addClass('active');
+		} else {
+			$('.balance-container .balance-right-block').addClass('active');
+			$('.balance-container .balance-affiliate-program').removeClass('active');
+		}
 
-		//атрибут в ссылке то делаем его активным
 	});
 	$(".commets-links a").on('click', function (event) { //ссылки которые будут переключать табы
 		event.preventDefault();
