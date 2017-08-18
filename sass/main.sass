@@ -1585,7 +1585,7 @@ body textarea:required:valid
 		.contacts-user
 			float: left
 			table
-				width: 340px
+				width: 570px
 				font-size: 14px
 				tr
 					&:first-child
@@ -1599,6 +1599,25 @@ body textarea:required:valid
 							color: #fb0018
 							a
 								color: inherit
+						i
+							width: 14px
+							height: 14px
+							margin-right: 10px
+							color: #fb0018
+						.fa-stack
+							width: 14px
+							height: 14px
+							margin-right: 10px
+							line-height: inherit
+							.fa
+								top: -5px
+							.fa-plus
+								top: -9px
+								left: 6px
+							.fa-minus
+								top: -9px
+								left: 6px
+
 					&:last-child
 						td
 							font-weight: 500
@@ -1623,6 +1642,65 @@ body textarea:required:valid
 					background: #cccccc
 					&:hover
 						background: #fb0018
+	.rating
+		display: flex
+		flex-direction: column
+		.rating-item-img_wrap
+			width: 770px
+			height: 75px
+			margin-bottom: 30px
+			background-color: #e8e8e8
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			padding-left: 20px
+			padding-right: 20px
+			padding-top: 20px
+			.rating-item-img
+				width: 70px
+				height: 60px
+				border: 1px solid #fb0018
+				border-bottom: none
+				&:nth-of-type(2) img
+					top: 10px
+				&:nth-of-type(3) img
+					top: 10px
+					left: 10px
+				&:nth-of-type(4) img
+					top: 10px
+				&:nth-of-type(5) img
+					top: 10px
+				img
+					position: relative
+					top: 5px
+					left: 5px
+
+		.rating-progress
+			width: 770px
+			height: 22px
+			position: relative
+			background-color: #e0dfdb
+			border-radius: 11px
+			.rating-progress-inner
+				width: 60%
+				height: 22px
+				position: absolute
+				left: 0
+				top: 0
+				background-image: linear-gradient(to right, #ff6901 0%, #fb0018 100%)
+				border-radius: 11px
+		.rating-level-list
+			width: 770px
+			ul
+				display: flex
+				padding: 0 40px 0 30px
+				align-items: flex-start
+				li
+					margin-right: 7%
+					list-style: none
+					&:last-of-type
+						margin-right: 0
+						margin-left: auto
 	.tabs-wrap-container
 		.checkbox
 			margin-right: 5px
@@ -1873,7 +1951,7 @@ body textarea:required:valid
 		.contacts-user
 			float: left
 			table
-				width: 340px
+				width: 570px
 				font-size: 14px
 				tr
 					&:first-child
@@ -1885,6 +1963,26 @@ body textarea:required:valid
 							font-weight: 900
 						&:last-child
 							color: #fb0018
+							a
+								color: inherit
+						i
+							width: 14px
+							height: 14px
+							margin-right: 10px
+							color: #fb0018
+						.fa-stack
+							width: 14px
+							height: 14px
+							margin-right: 10px
+							line-height: inherit
+							.fa
+								top: -5px
+							.fa-plus
+								top: -9px
+								left: 6px
+							.fa-minus
+								top: -9px
+								left: 6px
 					&:last-child
 						td
 							font-weight: 500
