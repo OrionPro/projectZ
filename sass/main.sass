@@ -1466,6 +1466,14 @@ body textarea:required:valid
 		label
 			margin-left: 38px
 			margin-bottom: 15px
+		.select
+			font-size: 14px
+			.slct
+				padding-left: 15px
+				padding-right: 20px
+			.drop
+				li
+					padding: 7px 15px 7px 15px
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -1642,11 +1650,139 @@ body textarea:required:valid
 					background: #cccccc
 					&:hover
 						background: #fb0018
+	@keyframes rating-lvl1
+		0%
+			width: 0
+		100%
+			width: 12%
+	@keyframes rating-lvl2
+		0%
+			width: 0
+		100%
+			width: 29%
+	@keyframes rating-lvl3
+		0%
+			width: 0
+		100%
+			width: 46%
+	@keyframes rating-lvl4
+		0%
+			width: 0
+		100%
+			width: 63.5%
+	@keyframes rating-lvl5
+		0%
+			width: 0
+		100%
+			width: 81%
+	@keyframes rating-lvl6
+		0%
+			width: 0
+		100%
+			width: 100%
+
+	.rating-wrap
+		display: flex
 	.rating
+		width: 770px
+		margin-right: 30px
 		display: flex
 		flex-direction: column
+		&.level-1
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl1
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+		&.level-2
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl2
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(2)
+					border: 1px solid #fb0018
+					border-bottom: none
+		&.level-3
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl3
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(2)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(3)
+					border: 1px solid #fb0018
+					border-bottom: none
+		&.level-4
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl4
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(2)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(3)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(4)
+					border: 1px solid #fb0018
+					border-bottom: none
+		&.level-5
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl5
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(2)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(3)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(4)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(5)
+					border: 1px solid #fb0018
+					border-bottom: none
+		&.level-6
+			.rating-progress
+				.rating-progress-inner
+					animation-name: rating-lvl6
+			.rating-item-img
+				&:nth-of-type(1)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(2)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(3)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(4)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(5)
+					border: 1px solid #fb0018
+					border-bottom: none
+				&:nth-of-type(6)
+					border: 1px solid #fb0018
+					border-bottom: none
 		.rating-item-img_wrap
-			width: 770px
+			width: 100%
 			height: 75px
 			margin-bottom: 30px
 			background-color: #e8e8e8
@@ -1655,11 +1791,11 @@ body textarea:required:valid
 			justify-content: space-between
 			padding-left: 20px
 			padding-right: 20px
-			padding-top: 20px
+			padding-top: 15px
 			.rating-item-img
 				width: 70px
 				height: 60px
-				border: 1px solid #fb0018
+				border: 1px solid #fff
 				border-bottom: none
 				&:nth-of-type(2) img
 					top: 10px
@@ -1682,18 +1818,20 @@ body textarea:required:valid
 			background-color: #e0dfdb
 			border-radius: 11px
 			.rating-progress-inner
-				width: 60%
 				height: 22px
 				position: absolute
 				left: 0
 				top: 0
 				background-image: linear-gradient(to right, #ff6901 0%, #fb0018 100%)
 				border-radius: 11px
+				animation-fill-mode: forwards
+				animation-duration: 1s
+				animation-delay: 1.5s
 		.rating-level-list
 			width: 770px
 			ul
 				display: flex
-				padding: 0 40px 0 30px
+				padding: 0 40px 0 20px
 				align-items: flex-start
 				li
 					margin-right: 7%
@@ -1701,6 +1839,37 @@ body textarea:required:valid
 					&:last-of-type
 						margin-right: 0
 						margin-left: auto
+	.the-status-left
+		display: flex
+		flex-direction: column
+		p
+			font-size: 14px
+			margin-bottom: 10px
+			span
+				color: #fb0018
+			i
+				margin-right: 10px
+				color: #fb0018
+		a
+			min-width: 285px
+			display: inline-block
+			margin-left: auto
+			text-align: center
+			padding: 9px 5px
+			background: #ccc
+			border: 0
+			color: #fff
+			transition: .3s
+			&:hover
+				background: #fb0018
+				text-decoration: none
+			&:active
+				background: #fb0018
+				text-decoration: none
+			&:focus
+				background: #fb0018
+				text-decoration: none
+
 	.tabs-wrap-container
 		.checkbox
 			margin-right: 5px
@@ -3154,11 +3323,7 @@ input[type=submit]
 			padding: 10px 17px
 			border: 1px solid #fb0018
 	.title-state
-		width: 100%
-		padding: 15px
 		font-weight: 500
-		display: block
-		background: #f8f8f8
 		font-size: 18px
 	.chat-container
 		.setting-wrap
@@ -3193,11 +3358,36 @@ input[type=submit]
 		.chat-wrap
 			width: 685px
 			float: left
+			.title-state-wrap
+				height: 66px
+				background: #f8f8f8
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: flex-start
+				margin-bottom: 20px
+				.title-notify
+					width: 285px
+					height: 100%
+					margin-left: auto
+					display: flex
+					flex-direction: row
+					align-items: center
+					justify-content: center
+					font-size: 18px
+					color: #fff
+					text-transform: uppercase
+					&.error
+						background-color: #fb0018
+					&.sucess
+						background-color: #00be92
 			.title-state
 				text-align: center
 				font-weight: 900
-				margin-bottom: 12px
+				margin-left: 25px
+				margin-bottom: 0
 				margin-top: 0
+				display: inline-block
 			.chat
 				overflow: auto
 				height: 392px
@@ -3300,6 +3490,43 @@ input[type=submit]
 						.date
 							font-weight: 300
 			.text-message
+				.invite-a-guarantor
+					margin-bottom: 5px
+					text-align: right
+					.checkbox
+						width: inherit
+						display: inline-block
+						padding-left: 0
+						float: none
+						margin-right: 15px
+						.check
+							padding-left: 22px
+							transition: color 0.5s
+							&:hover
+								color: #fb0018
+							&:hover p
+								visibility: visible
+								opacity: 1
+							p
+								width: 242px
+								position: absolute
+								visibility: hidden
+								opacity: 0
+								font-size: 12px
+								color: #000
+								background: #fff
+								left: -46px
+								top: -75px
+								border: 1px solid #fb0018
+								padding: 4px 6px
+								-webkit-border-radius: 5px
+								border-radius: 5px
+								z-index: 10
+								transition: .5s
+								a
+									color: black
+									text-decoration: underline
+
 				.checkbox
 					float: left
 					text-align: left
