@@ -2014,6 +2014,12 @@ body textarea:required:valid
 					font-weight: 500
 
 .user-profile
+	&.my-lots-container
+		.tabs-wrap-container
+			.tabs-wrap
+				table tbody
+					.button
+						color: #fff
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -2092,7 +2098,13 @@ body textarea:required:valid
 	.inform-wrap
 		margin-bottom: 50px
 		margin-left: 14px
+		.title-name-wrap
+			margin-bottom: 10px
+			img
+				vertical-align: bottom
+				display: inline-block
 		.title-name
+			display: inline-block
 			padding-left: 14px
 			.name
 				font-size: 24px
@@ -2139,6 +2151,7 @@ body textarea:required:valid
 							height: 14px
 							margin-right: 10px
 							color: #fb0018
+							text-align: center
 						.fa-stack
 							width: 14px
 							height: 14px
@@ -2152,9 +2165,11 @@ body textarea:required:valid
 							.fa-minus
 								top: -9px
 								left: 6px
-					&:last-child
-						td
-							font-weight: 500
+							.fa-shopping-basket
+								font-size: 10px
+								top: 2px
+								left: 7px
+								z-index: 10
 		.buttons-wrap
 			float: right
 			a
@@ -4127,7 +4142,9 @@ input[type=submit]
 				width: 34px
 				height: 34px
 				color: #000
-				display: inline-block
+				display: inline-flex
+				align-items: center
+				justify-content: center
 				border-radius: 50%
 				background-color: #818181
 				transition: 0.5s
