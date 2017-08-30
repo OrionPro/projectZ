@@ -1298,7 +1298,8 @@ body textarea:required:valid
 							transition: .3s
 							p
 								position: absolute
-								display: none
+								visibility: hidden
+								opacity: 0
 								font-size: 12px
 								color: #000
 								width: 155px
@@ -1308,10 +1309,12 @@ body textarea:required:valid
 								border: 1px solid #fb0018
 								padding: 4px 6px
 								border-radius: 5px
+								transition: 0.5s
 							&:hover
 								color: #fb0018
 								p
-									display: block
+									visibility: visible
+									opacity: 1
 					&.right
 						float: right
 						margin-right: 23px
@@ -1337,6 +1340,58 @@ body textarea:required:valid
 						.date
 							font-weight: 300
 			.text-message
+				.invite-a-guarantor
+					margin-bottom: 5px
+					display: flex
+					.interlocutor-writes
+						margin-right: auto
+						display: flex
+						opacity: 0
+						align-items: center
+						justify-content: center
+						transition: 0.5s
+						&.active
+							opacity: 1
+						.interlocutor-writes-svg
+							margin-right: 12px
+							display: inline-flex
+
+						span
+							font-size: 14px
+							color: #cccccc
+					.checkbox
+						width: inherit
+						display: inline-block
+						padding-left: 0
+						float: none
+						margin-right: 15px
+						.check
+							padding-left: 22px
+							transition: color 0.5s
+							&:hover
+								color: #fb0018
+							&:hover p
+								visibility: visible
+								opacity: 1
+							p
+								width: 242px
+								position: absolute
+								visibility: hidden
+								opacity: 0
+								font-size: 12px
+								color: #000
+								background: #fff
+								left: -46px
+								top: -75px
+								border: 1px solid #fb0018
+								padding: 4px 6px
+								-webkit-border-radius: 5px
+								border-radius: 5px
+								z-index: 10
+								transition: .5s
+								a
+									color: black
+									text-decoration: underline
 				.input
 					text-align: right
 					margin-top: 20px
@@ -3269,7 +3324,11 @@ input[type=submit]
 		background-position: 0 0
 	to
 		background-position: 122px 61px
-
+@keyframes fade
+	from
+		opacity: 0
+	to
+		opacity: 1
 .loading-contaienr
 	min-height: 500px
 	padding: 50px 0
@@ -3466,7 +3525,8 @@ input[type=submit]
 							transition: .3s
 							p
 								position: absolute
-								display: none
+								visibility: hidden
+								opacity: 0
 								font-size: 12px
 								color: #000
 								width: 155px
@@ -3476,10 +3536,12 @@ input[type=submit]
 								border: 1px solid #fb0018
 								padding: 4px 6px
 								border-radius: 5px
+								transition: 0.5s
 							&:hover
 								color: #fb0018
 								p
-									display: block
+									visibility: visible
+									opacity: 1
 					&.right
 						float: right
 						margin-right: 23px
@@ -3511,11 +3573,16 @@ input[type=submit]
 					.interlocutor-writes
 						margin-right: auto
 						display: flex
+						opacity: 0
 						align-items: center
 						justify-content: center
+						transition: 0.5s
+						&.active
+							opacity: 1
 						.interlocutor-writes-svg
-							display: inline-flex
 							margin-right: 12px
+							display: inline-flex
+
 						span
 							font-size: 14px
 							color: #cccccc
@@ -3665,7 +3732,7 @@ input[type=submit]
 		.fa-check
 			&:before
 				position: absolute
-				top: -4px
+				top: -3px
 				font-size: 15px
 		&.active
 			.fa
