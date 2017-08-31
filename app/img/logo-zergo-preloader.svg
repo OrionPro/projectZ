@@ -1,0 +1,38 @@
+
+<svg version="1.1" id="Layer_1" sodipodi:docname="logo Zergo [Converted].svg" inkscape:version="0.91 r13725" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="188px" height="90px" viewBox="0 0 468 221" enable-background="new 0 0 468 221" xml:space="preserve">
+				    <sodipodi:namedview inkscape:guide-bbox="true" inkscape:current-layer="Layer_1" inkscape:window-maximized="1" inkscape:window-y="-8" inkscape:window-x="-8" inkscape:window-height="801" inkscape:window-width="1536" inkscape:pageshadow="2" inkscape:pageopacity="0" showguides="false" inkscape:cy="-78.901235" inkscape:cx="204.46879" inkscape:zoom="0.5959596" showgrid="false" guidetolerance="10" gridtolerance="10" objecttolerance="10" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff" id="namedview9">
+				        <sodipodi:guide orientation="0,1" position="166.11864,58.728813" id="guide4145"></sodipodi:guide>
+				    </sodipodi:namedview>
+				    <g id="g4211">
+				        <g id="g4207">
+				            <linearGradient id="path5_1_" gradientUnits="userSpaceOnUse" x1="173.6508" y1="80.6673" x2="332.3101" y2="-19.5921" gradientTransform="matrix(1 0 0 -1 8.34 197.04)">
+				                <stop offset="0" style="stop-color:#A10214" />
+				                <stop offset="1" style="stop-color:#FE0018" />
+				            </linearGradient>
+				            <path id="path51313213" inkscape:connector-curvature="0" fill="url(#path5_1_)" d="M178.991,177.093l106.366-58.018
+							c0,0-3.568,75.196,53.183,101.531C281.34,194.218,276.041,150.734,178.991,177.093z" />
+				            <linearGradient id="path7_1_" gradientUnits="userSpaceOnUse" x1="251.6015" y1="783.524" x2="252.2253" y2="817.022" gradientTransform="matrix(4.8348 0 0 -4.8348 -954.1038 3950.4456)">
+				                <stop offset="0" style="stop-color:#A10214" />
+				                <stop offset="1" style="stop-color:#FE0018" />
+				            </linearGradient>
+				            <path id="path72231313213" sodipodi:nodetypes="cccccccccc" inkscape:connector-curvature="0" fill="url(#path7_1_)" d="M165.465,27.517
+							c0,0,76.869,21.96,4.835,135.375c31.436-16.023,167.719-87.443,194.659-114.596c13.67-12.908,10.115-29.572,2.208-36.395
+							c-5.186-4.443-11.904-6.791-22.414-8.909c-8.862-1.99-21.845-1.949-30.124-1.98c-14.542-0.054-158.832,12-158.832,12
+							s125.097-2.594,137.615,22.854c4.729,12.522-9.657,40.104-70.927,68.327C234.715,65.839,198.603,27.178,165.465,27.517z" />
+				        </g>
+				        <g opacity="0.97" enable-background="new    ">
+				            <path class="logo-letter" fill="#A90214" d="M79.509,89.511v10.395l-57.272,51.971h57.272v10.395H6.749v-10.395l57.688-51.971H6.749V89.511H79.509z" />
+				            <path class="logo-letter" fill="#A90214" d="M98.215,120.694h51.972v10.395H98.215v20.788h62.366v10.395h-72.76v-72.76h72.76v10.395H98.215V120.694z" />
+				        </g>
+				        <g opacity="0.97" enable-background="new    ">
+				            <path class="logo-letter" fill="#A90214" d="M338.107,120.655h41.577v20.788c0,11.019-9.147,20.789-20.789,20.789h-31.183
+							c-11.122,0-20.788-9.043-20.788-20.789v-31.183c0-11.018,9.146-20.788,20.788-20.788h31.183c11.122,0,20.478,9.251,20.789,20.788
+							H369.29c0-5.717-4.677-10.394-10.395-10.394h-31.183c-5.717,0-10.395,4.677-10.395,10.394v31.183
+							c0,5.718,4.678,10.395,10.395,10.395h31.183c5.718,0,10.395-4.677,10.395-10.395V131.05h-31.183V120.655z" />
+				            <path class="logo-letter" fill="#A90214" d="M460.756,141.443c0,11.435-9.354,20.789-20.788,20.789h-31.183c-11.538,0-20.789-9.251-20.789-20.789
+							v-31.183c0-11.434,9.355-20.788,20.789-20.788h31.183c11.018,0,20.788,9.459,20.788,20.788V141.443z M450.362,110.261
+							c0-5.717-4.678-10.394-10.395-10.394h-31.183c-5.717,0-10.395,4.677-10.395,10.394v31.183c0,5.718,4.678,10.395,10.395,10.395
+							h31.183c5.717,0,10.395-4.677,10.395-10.395V110.261z" />
+				        </g>
+				    </g>
+				</svg>

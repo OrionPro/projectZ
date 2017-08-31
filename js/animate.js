@@ -75,16 +75,11 @@ class Animation {
 				ease: Power4.easeOut
 			}, 0.3, "how-it-works_anim1");
 		this.tl4
-			.staggerFrom('.content-section .banners__item', 1, {
+			.from('.content-section .banners__item', 1, {
 				scaleY: 0.7,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.3, "+=1")
-			.staggerFrom('.content-section .main-content .wrap', 0.7, {
-				scaleX: 0.7,
-				opacity: 0,
-				ease: Power3.easeOut
-			}, 0.2, "-=0.6");
+			}, 0.7);
 		this.tl5
 			.from(".recruiting-find-clan__video-block", 0.7, {
 				scaleY: 0.7,
