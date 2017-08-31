@@ -232,7 +232,6 @@ $(document).ready(function () {
 
 	// Анимация interlocutor-writes-svg
 	var interlocutorSvg = new TimelineMax({repeat: -1,repeatDelay: 0.2});
-		//interlocutorSvg.pause();
 
 	interlocutorSvg.staggerFrom(".interlocutor-writes.active .interlocutor-comments-circle", 0.3, {fill: '#000', scale: 0, transformOrigin: "50% 50%", ease: Power2.easeInOut}, 0.3);
 
