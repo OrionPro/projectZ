@@ -113,6 +113,11 @@ function copyToClipboard(elem) {
 	return succeed;
 }
 $(document).ready(function () {
+	// клик на ссылке mute
+	$("a.mute ").on("click", function (e) {
+		e.preventDefault();
+		$(this).find('i').toggleClass('active');
+	});
 	//копируем то что в input
 	$(".copyLin").on("click", function (e) {
 		e.preventDefault();

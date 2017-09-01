@@ -3375,7 +3375,78 @@ input[type=submit]
 	.text
 		font-size: 18px
 		margin-bottom: 25px
+// Блок purchase-of-currency
+.purchase-of-currency
+	width: 800px
+	padding-top: 30px
+	display: flex
+	flex-direction: row
+	align-items: center
+	&>div
+		display: inline-flex
+		flex-direction: column
+		margin-right: auto
+	h3
+		margin: 0 0 10px 0
+	dl
+		margin: 0
+		display: inline-flex
+		dt
+			display: inline-flex
+			margin-right: 5px
+		dd
+			display: inline-flex
+			margin: 0
+			font-weight: 700
+			span
+				margin-left: 5px
+				margin-right: 20px
+				&.online
+					color: #1fa500
+	.plus-one
+		width: 24px
+		height: 24px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		background-color: white
+		border: 1px solid #c1c1c1
+		margin-right: 15px
+		border-radius: 3px
+		font-size: 14px
+		font-weight: 700
+		a
+			color: inherit
+			&:hover
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+			
+		&:nth-of-type(1)
+			color: #8bc365
+		&:nth-of-type(2)
+			color: #b91418
+		&:nth-of-type(3)
+			color: #1469b9
+	.button
+		width: 168px
+		height: 40px
+		border-radius: 15px
+		color: #fff
+		font-size: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		&.paid
+			background: linear-gradient(to right, #01510c, #018815)
+		&.close-currency
+			background: linear-gradient(to right, #A80204, #F11419)
+		&.unpaid
+			background: linear-gradient(to right, #EF8400, #FF991C)
 
+// блок sold-lots-comments-container
 .sold-lots-comments-container
 	padding: 40px 0
 	font-size: 18px
@@ -3396,6 +3467,8 @@ input[type=submit]
 		.text
 			padding: 10px 17px
 			border: 1px solid #fb0018
+			span
+				font-weight: 700
 	.title-state
 		font-weight: 500
 		font-size: 18px
@@ -3427,8 +3500,23 @@ input[type=submit]
 						padding: 4px 15px
 						&:first-child
 							font-weight: 900
+						span
+							&.red
+								color: #fb0018
 				.color-num
 					color: #fb0018
+			.checkbox
+				margin-bottom: 20px
+				cursor: pointer
+				&:hover .check
+					color: #262626
+				.check
+					color: #fb0018
+					transition: 0.5s
+			label
+				font-size: 14px
+				font-weight: normal
+				padding-left: 15px
 		.chat-wrap
 			width: 685px
 			float: left
@@ -3443,7 +3531,6 @@ input[type=submit]
 				.title-notify
 					width: 285px
 					height: 100%
-					margin-left: auto
 					display: flex
 					flex-direction: row
 					align-items: center
@@ -3455,6 +3542,17 @@ input[type=submit]
 						background-color: #fb0018
 					&.sucess
 						background-color: #00be92
+				a
+					&.mute
+						margin-right: auto
+						margin-left: auto
+				i
+					color: #fb0018
+					&:before
+						content: "\f0f3"
+					&.active:before
+						content: "\f1f6"
+
 			.title-state
 				text-align: center
 				font-weight: 900
@@ -3664,6 +3762,12 @@ input[type=submit]
 				padding: 0
 				border: 0
 				font-size: 14px
+			input[type=submit]
+				width: 285px
+				&.red
+					background: #fb0018
+					&:hover
+						background: #cccccc
 			.select
 				margin-bottom: 20px
 				border: 1px solid #ccc
@@ -3705,7 +3809,26 @@ input[type=submit]
 				input[type=submit]
 					width: 170px
 					margin-left: 11px
-
+		.alert
+			width: 485px
+			height: 74px
+			padding-left: 15px
+			padding-right: 25px
+			background-color: #f8f8f8
+			border-radius: 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			p
+				font-size: 14px
+				line-height: 1.2
+			i
+				position: absolute
+				top: 10px
+				right: 10px
+				font-size: 14px
+				color: #fb0018
 .checkbox
 	display: inline-block
 	margin-right: 30px
