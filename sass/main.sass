@@ -3753,19 +3753,26 @@ input[type=submit]
 		.form-container
 			margin-top: 20px
 			width: 485px
+			.flex
+				display: flex
 			input
 				width: 100%
 				height: 40px
 				padding-left: 15px
 				margin-bottom: 20px
+				&.main_btn_inline
+					min-width: 170px
+					width: 170px
 			input[type=submit]
 				padding: 0
 				border: 0
 				font-size: 14px
 			input[type=submit]
-				width: 285px
 				&.red
+					width: 285px
 					background: #fb0018
+					margin-bottom: 50px
+					margin-right: 30px
 					&:hover
 						background: #cccccc
 			.select
