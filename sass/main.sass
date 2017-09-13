@@ -2796,9 +2796,19 @@ input[type=submit]
 
 .service-container
 	margin-top: 40px
+	&.my-office-my-offers
+		.title-wrap
+			margin-bottom: 15px
+		.my-office-my-offers__btn
+			width: 270px
+			margin-bottom: 30px
 	.title-wrap
 		display: flex
 		margin-bottom: 10px
+		&.my-office-my-offers
+			border-bottom: 1px solid #ccc
+			h3
+				padding-bottom: 15px
 	.title__h3
 		font-size: 24px
 		margin-top: 0
@@ -2960,11 +2970,23 @@ input[type=submit]
 		min-height: 500px
 	.intermediate-container
 		margin-bottom: 40px
+		&.counter-offers
+			display: flex
 		.select
 			display: inline-block
 			width: 285px
+			height: 40px
 			margin-right: 30px
 			margin-bottom: 30px
+		.add-counter-offers
+			width: 285px
+			display: inline-flex
+			flex-direction: column
+			a
+				margin-left: 0
+				margin-bottom: 15px
+				padding: 10px 24px
+				text-align: center
 		.checkboxes
 			&.inline-block
 				display: inline-block
@@ -3061,6 +3083,30 @@ input[type=submit]
 		width: 100%
 		border-collapse: collapse
 		border-spacing: 0
+		&.service-table
+			tbody
+				tr
+					transition: .3s
+					&:hover
+						background: #f8f8f8
+						cursor: pointer
+					&:hover td > span
+						color: #fb0018
+		&.counter-offers-table
+			thead
+				td
+					padding: 14.5px 8.5px
+			tbody
+				td
+					&:nth-child(n+2):nth-child(-n+4)
+						width: 155px
+		&.my-office-my-offers
+			tbody
+				td
+					&:nth-child(n+2):nth-child(-n+4)
+						width: inherit
+					&:nth-child(n+1):nth-child(-n+3)
+						width: 160px
 		&.table-2
 			tr
 				td
@@ -3081,23 +3127,32 @@ input[type=submit]
 			td
 				position: relative
 				padding: 15px
+				.table-top-bot-wrap
+					display: flex
+					align-items: center
+					span
+						display: inline-block
+						line-height: 1.2
+						margin-right: 5px
+				.table-top-bot
+					display: inline-flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
 			.button
 				width: 0
 				height: 0
-				display: inline-block
+				display: block
 				border: 6px solid transparent
 				background: transparent
-				position: absolute
-				margin-left: 10px
 				transition: .3s
 				&.bottom
 					border-top-color: #000
-					top: 30px
 					&:hover
 						border-top-color: #fb0018
 				&.top
+					margin-bottom: 5px
 					border-bottom-color: #000
-					top: 15px
 					&:hover
 						border-bottom-color: #fb0018
 		tbody
@@ -3105,26 +3160,25 @@ input[type=submit]
 				padding: 8.5px
 				border-bottom: 1px solid #ccc
 				cursor: pointer
+				button
+					width: 122px
+					height: 36px
+					font-size: 14px
+					color: #ffffff
+					background-color: #fb0018
+					transition: 0.5s
+					border: none
+					&:hover
+						background: #ccc
+						outline: 0
+					&:active
+						background: #ccc
+						outline: 0
+					&:focus
+						background: #ccc
+						outline: 0
 				&:last-child
 					width: 10%
-					button
-						width: 122px
-						height: 36px
-						font-size: 14px
-						color: #ffffff
-						background-color: #fb0018
-						transition: 0.5s
-						border: none
-						&:hover
-							background: #ccc
-							outline: 0
-						&:active
-							background: #ccc
-							outline: 0
-						&:focus
-							background: #ccc
-							outline: 0
-
 				&.price
 					width: 180px
 				&.name-item
@@ -3136,8 +3190,6 @@ input[type=submit]
 				&:hover
 					background: #f8f8f8
 					cursor: pointer
-				&:hover td > span
-					color: #fb0018
 				a
 					font-size: 14px
 					color: #000000

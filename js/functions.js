@@ -84,10 +84,16 @@ $(document).ready(function() {
    
 
 	// Select в модальном окне
-	$(document).click(function() {
+	$(document).click(function (event) {
+		if ($(event.target).closest(".select").length)
+			return;
 		$('.slct').removeClass('active');
-		$('.slct_arrow').removeClass('active');
+		$('.arrow').removeClass('active');
 		$('.slct').parent().find('.drop').slideUp("fast");
+		event.stopPropagation();
+	});
+	$('.select .arrow').on('click', function () {
+		$(this).siblings('.slct').trigger('click');
 	});
 	$('.slct').click(function() {
 		/* Заносим выпадающий список в переменную */
@@ -101,7 +107,7 @@ $(document).ready(function() {
 
 			/* Выделяем ссылку открывающую select */
 			$(this).addClass('active');
-			$(this).siblings(".slct_arrow").addClass('active');
+			$(this).siblings(".arrow").addClass('active');
 
 
 			/* Работаем с событием клика по элементам выпадающего списка */
@@ -118,7 +124,7 @@ $(document).ready(function() {
 				/* Передаем значение переменной selectResult в ссылку которая
 				открывает наш выпадающий список и удаляем активность */
 				$(this).parent().parent().find(".slct").removeClass('active').html(selectResult);
-				$(".slct_arrow").removeClass('active');
+				$(".arrow").removeClass('active');
 
 				/* Скрываем выпадающий блок */
 				dropBlock.slideUp();
@@ -127,7 +133,7 @@ $(document).ready(function() {
 			/* Продолжаем проверку: Если выпадающий блок не скрыт то скрываем его */
 		} else {
 			$(this).removeClass('active');
-			$(".slct_arrow").removeClass('active');
+			$(".arrow").removeClass('active');
 			dropBlock.slideUp();
 		}
 
