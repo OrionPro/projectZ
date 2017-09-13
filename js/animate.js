@@ -9,6 +9,8 @@ class Animation {
 		this.tl3 = new TimelineMax();
 		this.tl4 = new TimelineMax();
 		this.tl5 = new TimelineMax();
+		this.tl6 = new TimelineMax();
+		this.tl7 = new TimelineMax();
 
 		this.tl0.pause();
 		this.tl1.pause();
@@ -16,6 +18,8 @@ class Animation {
 		this.tl3.pause();
 		this.tl4.pause();
 		this.tl5.pause();
+		this.tl6.pause();
+		this.tl7.pause();
 	}
 
 	description() {
@@ -85,7 +89,20 @@ class Animation {
 				scaleY: 0.7,
 				opacity: 0,
 				ease: Power3.easeOut
-			},0.5)
+			},0.5);
+		this.tl6
+			.staggerFrom(".add-offer-game-selection__wrap-item", 0.5, {
+				scaleY: 0.7,
+				opacity: 0,
+				ease: Power3.easeOut
+			},0.2, '+=1');
+		this.tl7
+			.from(".add-offer-game-selection__letter", 1, {
+				scale: 0,
+				x: 200,
+				autoAlpha: 0,
+				ease: Power3.easeOut
+			}, '+=1');
 	}
 
 	activeSection(section, startTop = 0, startBotton = 0) {
@@ -120,6 +137,10 @@ class Animation {
 		}
 		if (this.activeSection('recruiting-find-clan',500, 500)) {
 			this.tl5.resume();
+		}
+		if (this.activeSection('content-section',500, 500)) {
+			this.tl6.resume();
+			this.tl7.resume();
 		}
 	}
 }
