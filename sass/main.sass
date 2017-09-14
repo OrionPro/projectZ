@@ -2945,7 +2945,23 @@ input[type=submit]
 				&.active
 					opacity: 1
 					visibility: visible
-				a
+				.choice-of-language
+					display: inline-block
+					a
+						filter: grayscale(100)
+						transition: 0.5s
+						color: transparent
+						text-decoration: none
+						&.active
+							filter: grayscale(0)
+						&:hover
+							text-decoration: none
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
+						
+				&>a
 					min-width: 270px
 					height: 35px
 					color: #fff

@@ -113,6 +113,13 @@ function copyToClipboard(elem) {
 	return succeed;
 }
 $(document).ready(function () {
+	// клик по ссылке в .choice-of-language
+
+	$("a.mute ").on("click", function (e) {
+		e.preventDefault();
+		$(this).find('i').toggleClass('active');
+	});
+
 	// клик на ссылке mute
 	$("a.mute ").on("click", function (e) {
 		e.preventDefault();
