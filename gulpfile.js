@@ -72,7 +72,9 @@ gulp.task('libs', function() {
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js',
 		'app/libs/inputmask/inputmask.js',
-		'app/libs/scroll-style/jquery.scrollbar.min.js'
+		'app/libs/scroll-style/jquery.scrollbar.min.js',
+		'app/libs/jquery-gray/functions.js',
+		'app/libs/jquery-gray/grayscale.js',
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

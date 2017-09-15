@@ -115,9 +115,10 @@ function copyToClipboard(elem) {
 $(document).ready(function () {
 	// клик по ссылке в .choice-of-language
 
-	$("a.mute ").on("click", function (e) {
+	$(".service-container .tabs-item-conatiner .filter-select .necessary-item .choice-of-language a").on("click", function (e) {
 		e.preventDefault();
-		$(this).find('i').toggleClass('active');
+		$(".service-container .tabs-item-conatiner .filter-select .necessary-item .choice-of-language img").removeClass('active');
+		$(this).find('img').toggleClass('active');
 	});
 
 	// клик на ссылке mute
@@ -174,9 +175,16 @@ $(document).ready(function () {
 		$('.check i, .radio i').css("margin-top", "2px")
 	}
 	Loading();
+
 	//fixedHeader
-	var logoAndInfo = $(".logo-container").outerHeight() + $(".top-important-information").outerHeight();
-	$("#fixed").sticky({topSpacing: -logoAndInfo + 5});
+	var logoAndInfo = $('.top-important-information').length ?  $(".logo-container").outerHeight() + $(".top-important-information").outerHeight() :  $(".logo-container").outerHeight();
+	// Отключить стики в нужном месте
+	//var bottom = $(document).height() - ($('.service-container table').outerHeight()+ $('.service-container table').offset().top);
+
+	$("#fixed").sticky({
+		topSpacing: -logoAndInfo + 5,
+		//bottomSpacing: bottom
+		});
 
 	accordion();
 	$('.select-2').hover(function () {
@@ -259,6 +267,7 @@ $(document).ready(function () {
 		$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 		if (data === 3) {
 			$('.service-container .tabs-item-conatiner .filter-select .necessary-item').addClass('active');
+
 		} else {
 			$('.service-container .tabs-item-conatiner .filter-select .necessary-item').removeClass('active');
 		}
@@ -284,7 +293,6 @@ $(document).ready(function () {
 		//атрибут в ссылке то делаем его активным
 	});
 	$('.chat').scrollbar();
-
 	// для инициализации tooltips
 	// $( document ).tooltip({
 	//   track: true

@@ -2948,12 +2948,9 @@ input[type=submit]
 				.choice-of-language
 					display: inline-block
 					a
-						filter: grayscale(100)
 						transition: 0.5s
 						color: transparent
 						text-decoration: none
-						&.active
-							filter: grayscale(0)
 						&:hover
 							text-decoration: none
 						&:active
@@ -3193,6 +3190,13 @@ input[type=submit]
 						width: 12%
 					&:nth-child(2)
 						width: 36%
+					.service-container-table__wrap-img
+						display: flex
+						justify-content: center
+						align-items: center
+						img
+							margin-right: 10px
+							cursor: pointer
 		thead
 			font-weight: 900
 			border-bottom: 1px solid #ccc
@@ -3286,7 +3290,7 @@ input[type=submit]
 		margin-bottom: 10px
 		button
 			display: inline-block
-			vertical-align: super
+			vertical-align: middle
 			transition: .3s
 			&:hover
 				text-decoration: none
@@ -3317,6 +3321,7 @@ input[type=submit]
 				border-left-color: #fb0018
 		.pagination
 			display: inline-block
+			vertical-align: middle
 			margin: 0 10px
 			transition: .3s
 			a
