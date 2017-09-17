@@ -54,7 +54,7 @@ function setCursorPos(elem, pos) {
 		range.select();
 	}
 }
-// A
+// inputPadding
 function inputPadding() {
 	$(".recruiting-editing__input").each(function () {
 		var widthSpan = $(this).find("label").width();
