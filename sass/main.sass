@@ -38,7 +38,6 @@ body textarea:required:valid
 // Оформление слайдбара
 
 
-
 // Секция our_advantages
 .our_advantages
 	min-height: 630px
@@ -1711,7 +1710,7 @@ body textarea:required:valid
 					text-decoration: none
 				&:focus
 					text-decoration: none
-				&.redatction
+				&.edit
 					background: #cccccc
 					&:hover
 						background: #fb0018
@@ -3394,7 +3393,25 @@ input[type=submit]
 			.number
 				li
 					list-style-type: decimal
-
+.article-wrap-index
+	margin-bottom: 50px
+	h1
+		color: #262626
+		font-family: $font_MyriadPro_Bold
+	img
+		margin-top: 60px
+	.article
+		overflow: auto
+		max-height: 400px
+		h3
+			margin-top: 0
+		.text
+			margin-bottom: 25px
+		li
+			padding-left: 10px
+		.number
+			li
+				list-style-type: decimal
 .error-contaienr
 	padding: 40px 0
 	.title-wrap
@@ -4133,6 +4150,8 @@ input[type=submit]
 		margin-bottom: 5px
 	.social-rows
 		margin-top: 30px
+		&.margin-bottom
+			margin-bottom: 50px
 		.item
 			display: inline-block
 			margin-right: 15px

@@ -293,6 +293,7 @@ $(document).ready(function () {
 		//атрибут в ссылке то делаем его активным
 	});
 	$('.chat').scrollbar();
+	$('.scrollbar-inner').scrollbar();
 	// для инициализации tooltips
 	// $( document ).tooltip({
 	//   track: true
