@@ -1,7 +1,7 @@
 @import "bourbon"
 @import "vars.sass"
 @import "fonts.sass"
-@import "sprite/sprite.sass"
+@import "../sprite/sprite"
 @import "../app/libs/scroll-style/jquery.scrollbar"
 @import "../app/libs/scroll-style/prettify"
 @import "../app/libs/jquery-gray/grayscale.css"
@@ -10,7 +10,7 @@ html
 	position: relative // Это для
 	min-height: 100%  // футера прилипающего
 body
-	margin-bottom: 134px !important // Это для футера прилипающего
+	margin-bottom: 300px !important // Это для футера прилипающего
 	font-size: 16px
 	min-width: 320px
 	line-height: 1.6
@@ -808,6 +808,7 @@ label.check, label.radio
 			&:focus
 				text-decoration: none
 		.recrut
+			margin-left: 15px
 			font-size: 14px
 			float: left
 			i
