@@ -28,7 +28,11 @@ $font_MyriadPro_Bold: "MyriadPro-Bold", Arial, sans-serif
 	color: $color
 	font: $fz $ff
 	line-height: $lh
-
+@mixin truncate($truncation-boundary)
+	max-width: $truncation-boundary
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
 
 %main_btn
 	width: 272px
