@@ -661,10 +661,13 @@ body textarea:required:valid
 	.index-common-item
 		width: 370px
 		height: 405px
-		border: 1px solid #fb0018
+		border: 1px solid transparent
 		margin: 0 15px 30px 15px
 		position: relative
 		overflow: hidden
+		transition: 0.5s
+		&:hover
+			border: 1px solid #fb0018
 		&:hover .index-common-item__img-mask
 			background-color: rgba(0,0,0,0)
 		&>a
@@ -709,12 +712,16 @@ body textarea:required:valid
 			color: #fb0018
 			position: relative
 			z-index: 6
+			transition: 0.3s
 			&:hover
 				text-decoration: none
+				color: #fff
 			&:active
 				text-decoration: none
+				color: #fff
 			&:focus
 				text-decoration: none
+				color: #fff
 
 
 		.index-common-item__info-top
