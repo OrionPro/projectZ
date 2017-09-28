@@ -163,6 +163,10 @@ body textarea:required:valid
 		height: 45px
 		&.index-common
 			height: inherit
+		&.download-guide
+			form
+				input
+					padding-left: 25px
 		#anim-form-main-2
 			opacity: 0
 			transform: matrix(1, 0, 0, 1, 0, -100)
@@ -660,7 +664,7 @@ body textarea:required:valid
 	flex-wrap: wrap
 	.index-common-item
 		width: 370px
-		height: 405px
+		height: 417px
 		border: 1px solid transparent
 		margin: 0 15px 30px 15px
 		position: relative
@@ -668,6 +672,7 @@ body textarea:required:valid
 		transition: 0.5s
 		&:hover
 			border: 1px solid #fb0018
+			box-shadow: -6.4px 7.7px 9px 1px rgba(133, 133, 133, 0.5)
 		&:hover .index-common-item__img-mask
 			background-color: rgba(0,0,0,0)
 		&>a
@@ -693,7 +698,7 @@ body textarea:required:valid
 		background-color: rgba(0,0,0,0.30)
 		transition: 0.5s
 	.index-common-item__info
-		height: 158px
+		height: 170px
 		padding: 10px 20px
 		background-color: #1a1a1a
 		color: #fff
@@ -726,28 +731,30 @@ body textarea:required:valid
 
 		.index-common-item__info-top
 			display: flex
-			align-items: center
+			flex-direction: column
 		dl
 			margin: 0 auto 0 0
 			dt
+				display: inline-block
+				margin-bottom: 5px
 				font-size: 14px
 				font-family: $font_SFUIDisplay-Heavy
-				display: inline-block
 			dd
 				display: inline-block
 				vertical-align: middle
 				margin-left: 5px
 				padding-right: 10px
 				font-size: 12px
-				@include truncate(150px)
+				@include truncate(270px)
 	.index-common-item__views
 		height: 19px
 		font-size: 14px
 		display: inline-block
 		vertical-align: middle
 		span
-			&:first-of-type
-				margin-right: 10px
+			margin-right: 10px
+			&:last-of-type
+				margin-right: 0
 		i
 			margin-right: 5px
 			color: #fb0018
@@ -4489,6 +4496,8 @@ input[type=submit]
 	&.favorites
 		padding-left: 15px
 		border-bottom: none
+	&.download-guide
+		padding-bottom: 0
 	h1
 		font-size: 24px
 		color: #000000
