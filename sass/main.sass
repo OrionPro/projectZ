@@ -156,6 +156,46 @@ body textarea:required:valid
 				outline: 0
 			&:active
 				outline: 0
+	.download-guide__tags
+		padding-left: 15px
+		padding-right: 15px
+		display: flex
+		input
+			height: 44px
+			padding-left: 15px
+			&:first-of-type
+				width: 470px
+				margin-right: 30px
+			&:last-of-type
+				width: 670px
+	.download-guide__tags-wrap
+		display: flex
+		min-height: 100px
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 10px
+		flex-wrap: wrap
+		.download-guide__tags-item
+			margin-right: 20px
+			a
+				margin-right: 10px
+				transition: 0.5s
+				color: inherit
+				&:hover
+					text-decoration: none
+					color: $main_color
+				&:active
+					text-decoration: none
+					color: $main_color
+				&:focus
+					text-decoration: none
+					color: $main_color
+
+			i
+				cursor: pointer
+				transition: 0.5s
+				&:hover
+					color: $main_color
 	.form-wrap
 		margin-top: 33px
 		margin-bottom: 30px
@@ -166,7 +206,7 @@ body textarea:required:valid
 		&.download-guide
 			form
 				input
-					padding-left: 25px
+					padding-left: 15px
 		#anim-form-main-2
 			opacity: 0
 			transform: matrix(1, 0, 0, 1, 0, -100)

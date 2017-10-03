@@ -20,6 +20,7 @@ function accordion() {
 		}
 	});
 }
+
 function Loading() {
 	var level = 0;
 
@@ -39,7 +40,6 @@ $(window).scroll(function () {
 });
 
 
-
 function setCursorPos(elem, pos) {
 	if (elem.setSelectionRange) {
 		elem.focus();
@@ -54,6 +54,7 @@ function setCursorPos(elem, pos) {
 		range.select();
 	}
 }
+
 // inputPadding
 function inputPadding() {
 	$(".recruiting-editing__input").each(function () {
@@ -112,7 +113,33 @@ function copyToClipboard(elem) {
 	}
 	return succeed;
 }
+
 $(document).ready(function () {
+
+	//Создание тегов
+
+	let tagTpl = text => (
+			`
+			<div class='download-guide__tags-item'>
+				<a href="#">#${text}</a>
+				<i class='fa fa-close'></i>
+			</div>
+			`
+	);
+
+	$('#tag').on('keypress', function ({target:{value}, keyCode} = e) {
+			if (keyCode === 13) {
+				var pattern = /s$/;
+				if (value !== "" && value.match(pattern)) {
+					$('.download-guide__tags-wrap').append(tagTpl(value));
+					this.value = "";
+				}
+			} else {
+				return null;
+			}
+		}
+	);
+
 	// клик по ссылке в .choice-of-language
 
 	$(".service-container .tabs-item-conatiner .filter-select .necessary-item .choice-of-language a").on("click", function (e) {
@@ -171,20 +198,20 @@ $(document).ready(function () {
 		// $(".website_promotion .website_promotion_decor").css("bottom", "-177px");
 		// $(".cost_of_online_store .cost_of_online_store_links_item").css("margin-right", "72px");
 	}
-	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Edge")  {
+	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Edge") {
 		$('.check i, .radio i').css("margin-top", "2px")
 	}
 	Loading();
 
 	//fixedHeader
-	var logoAndInfo = $('.top-important-information').length ?  $(".logo-container").outerHeight() + $(".top-important-information").outerHeight() :  $(".logo-container").outerHeight();
+	var logoAndInfo = $('.top-important-information').length ? $(".logo-container").outerHeight() + $(".top-important-information").outerHeight() : $(".logo-container").outerHeight();
 	// Отключить стики в нужном месте
 	//var bottom = $(document).height() - ($('.service-container table').outerHeight()+ $('.service-container table').offset().top);
 
 	$("#fixed").sticky({
 		topSpacing: -logoAndInfo + 5,
 		//bottomSpacing: bottom
-		});
+	});
 
 	accordion();
 	$('.select-2').hover(function () {
@@ -192,39 +219,41 @@ $(document).ready(function () {
 		$(this).find('.login').toggleClass("color");
 		$(this).find('.select-list').toggle("drop", {direction: "left"}, 200);
 	});
-	
-	
-	
+
+
 	$(".input-mask").mask("+38(999) 999-99-99");
 	$(".whis-contry").mask("(9) 99 999 99 99");
-	
-	
+
+
 	$(".back-lote-input")
 		.click(function () {
 			var arr = $(this).val().split(' '),
-				arrMain =  $(this).val().split(" " + arr[arr.length - 1]);
-			if(arr[0] == "0"){
+				arrMain = $(this).val().split(" " + arr[arr.length - 1]);
+			if (arr[0] == "0") {
 				$(this).val(" " + arr[1]);
 
-				setCursorPos(this, arrMain[0].length-1);
-			}else{
+				setCursorPos(this, arrMain[0].length - 1);
+			} else {
 				setCursorPos(this, arrMain[0].length);
 			}
-	});
+		});
 	// Анимация при клике
 	var lf1 = new TimelineMax(),
 		lf2 = new TimelineMax();
 
 	lf1.pause();
 	lf2.pause();
-	function anim () {
+
+	function anim() {
 		lf1.pause();
 	}
-	function anim2 () {
+
+	function anim2() {
 		lf2.pause();
 	}
+
 	lf1.to('#anim-form-main-1', 0.5, {y: -100, opacity: 0, ease: Power0.easeIn});
-	lf2.to('#anim-form-main-2', 0.5, {y: 0, opacity: 1,  ease: Power0.easeIn});
+	lf2.to('#anim-form-main-2', 0.5, {y: 0, opacity: 1, ease: Power0.easeIn});
 
 	$('#find-game-or-server').click(function (e) {
 		e.preventDefault();
@@ -251,9 +280,14 @@ $(document).ready(function () {
 	});
 
 	// Анимация interlocutor-writes-svg
-	var interlocutorSvg = new TimelineMax({repeat: -1,repeatDelay: 0.2});
+	var interlocutorSvg = new TimelineMax({repeat: -1, repeatDelay: 0.2});
 
-	interlocutorSvg.staggerFrom(".interlocutor-writes.active .interlocutor-comments-circle", 0.3, {fill: '#000', scale: 0, transformOrigin: "50% 50%", ease: Power2.easeInOut}, 0.3);
+	interlocutorSvg.staggerFrom(".interlocutor-writes.active .interlocutor-comments-circle", 0.3, {
+		fill: '#000',
+		scale: 0,
+		transformOrigin: "50% 50%",
+		ease: Power2.easeInOut
+	}, 0.3);
 
 	$(".tabs-item").on('click', function (event) { //ссылки которые будут переключать табы
 		event.preventDefault();
