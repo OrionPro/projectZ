@@ -129,7 +129,7 @@ $(document).ready(function () {
 
 	$('#tag').on('keypress', function ({target:{value}, keyCode} = e) {
 			if (keyCode === 13) {
-				var pattern = /s$/;
+				var pattern = /^(?! )(?!.* $)(?!(?:.* ){1}).*$/;
 				if (value !== "" && value.match(pattern)) {
 					$('.download-guide__tags-wrap').append(tagTpl(value));
 					this.value = "";
@@ -139,7 +139,9 @@ $(document).ready(function () {
 			}
 		}
 	);
-
+	$(document).on('click', '.download-guide__tags-item i', function () {
+		$(this).parent().remove();
+	});
 	// клик по ссылке в .choice-of-language
 
 	$(".service-container .tabs-item-conatiner .filter-select .necessary-item .choice-of-language a").on("click", function (e) {
